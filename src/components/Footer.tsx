@@ -7,32 +7,25 @@ import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
   {
-    title: 'Work',
+    title: 'Trading',
     links: [
-      { title: 'FamilyFund', href: '/work/family-fund' },
-      { title: 'Unseal', href: '/work/unseal' },
-      { title: 'Phobia', href: '/work/phobia' },
-      {
-        title: (
-          <>
-            See all <span aria-hidden="true">&rarr;</span>
-          </>
-        ),
-        href: '/work',
-      },
-    ],
-  },
-  {
-    title: 'Company',
-    links: [
-      { title: 'About', href: '/about' },
-      { title: 'Process', href: '/process' },
+      { title: 'News', href: '/news' },
+      { title: 'Quotes', href: '/quotes' },
       { title: 'Blog', href: '/blog' },
-      { title: 'Contact us', href: '/contact' },
+      { title: 'Thư viện', href: '/library' },
     ],
   },
   {
-    title: 'Connect',
+    title: 'Học tập',
+    links: [
+      { title: 'Khoá Học', href: '/courses' },
+      { title: 'Thư viện', href: '/library' },
+      { title: 'Blog', href: '/blog' },
+      { title: 'Liên hệ', href: '/contact' },
+    ],
+  },
+  {
+    title: 'Kết nối',
     links: socialMediaProfiles,
   },
 ]
@@ -82,11 +75,11 @@ function NewsletterForm() {
   return (
     <form className="max-w-sm">
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-        Sign up for our newsletter
+        Đăng ký nhận bản tin
       </h2>
       <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
+        Đăng ký để nhận tin tức mới nhất về thị trường, bài viết, tài liệu và
+        các cập nhật từ Gemi Trader.
       </p>
       <div className="relative mt-6">
         <input
@@ -125,7 +118,7 @@ export function Footer() {
             <Logo className="h-8" fillOnHover />
           </Link>
           <p className="text-sm text-neutral-700">
-            © Studio Agency Inc. {new Date().getFullYear()}
+            © Gemi Trader {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>
