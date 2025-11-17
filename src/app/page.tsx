@@ -20,6 +20,7 @@ import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import QuotesShowcase from '@/components/Quotes'
 
 const clients = [
   ['Phobia', logoPhobiaLight],
@@ -192,6 +193,9 @@ export default async function Home() {
           </p>
         </FadeIn>
       </Container>
+      <div className="mt-16 sm:mt-24 lg:mt-32">
+        <QuotesShowcase />
+      </div>
 
       <Clients />
 
