@@ -87,8 +87,6 @@ export default function SocialPostPage({ params }: SocialPostPageProps) {
 
           <div className="flex flex-wrap gap-4 text-sm text-neutral-500">
             <span>{post.views.toLocaleString('vi-VN')} lượt xem</span>
-            <span>{post.likes.toLocaleString('vi-VN')} lượt thích</span>
-            <span>{post.comments.toLocaleString('vi-VN')} bình luận</span>
             <span>{post.shares.toLocaleString('vi-VN')} lượt chia sẻ</span>
           </div>
 
