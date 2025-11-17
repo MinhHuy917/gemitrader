@@ -901,9 +901,9 @@ const Quotes = () => {
               >
                     <div className="flex-1">
                   <QuoteIcon className="h-8 w-8 text-primary mb-4 opacity-60" />
-                      <p className="text-foreground leading-relaxed mb-6 italic">
-                        "{quote.text}"
-                      </p>
+                  <p className="text-foreground leading-relaxed mb-6 italic">
+                    &ldquo;{quote.text}&rdquo;
+                  </p>
                     </div>
                     <div className="text-sm font-medium text-primary">
                       — {quote.author}
