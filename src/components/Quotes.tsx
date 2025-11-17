@@ -876,100 +876,113 @@ const Quotes = () => {
 
   return (
     <section className="py-16 px-4">
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">
-            Trading Wisdom
-          </h2>
-          <p className="text-muted-foreground">
-            Những câu nói hay từ các trader và nhà đầu tư huyền thoại
-          </p>
-        </div>
+  <div className="max-w-5xl mx-auto">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-bold mb-4">Trading Wisdom</h2>
+      <p className="text-muted-foreground">
+        Những câu nói hay từ các trader và nhà đầu tư huyền thoại
+      </p>
+    </div>
 
-        <div className="relative">
-          <div
-            ref={scrollContainerRef}
-            className="flex gap-4 overflow-x-auto scroll-smooth pb-6 pt-2 snap-x snap-mandatory"
+    <div className="relative">
+      <div
+        ref={scrollContainerRef}
+        className="flex gap-4 overflow-x-auto scroll-smooth pb-6 pt-2 snap-x snap-mandatory"
+      >
+        {quotes.map((quote, index) => (
+          <article
+            key={`${quote.author}-${index}`}
+            ref={(el: HTMLDivElement | null) => {
+              itemRefs.current[index] = el;
+            }}
+            className="card-minimal flex min-w-[85%] snap-center flex-col justify-between rounded-2xl border border-neutral-200 bg-white/90 p-6 shadow-sm ring-1 ring-neutral-950/5 backdrop-blur sm:min-w-[55%] lg:min-w-[32%]"
           >
-            {quotes.map((quote, index) => (
-              <article
-                key={`${quote.author}-${index}`}
-                ref={(el) => {
-                  itemRefs.current[index] = el;
-                }}
-                className="card-minimal flex min-w-[85%] snap-center flex-col justify-between rounded-2xl border border-neutral-200 bg-white/90 p-6 shadow-sm ring-1 ring-neutral-950/5 backdrop-blur sm:min-w-[55%] lg:min-w-[32%]"
-              >
-                    <div className="flex-1">
-                  <QuoteIcon className="h-8 w-8 text-primary mb-4 opacity-60" />
-                  <p className="text-foreground leading-relaxed mb-6 italic">
-                    &ldquo;{quote.text}&rdquo;
-                  </p>
-                    </div>
-                    <div className="text-sm font-medium text-primary">
-                      — {quote.author}
-                    </div>
-              </article>
-            ))}
-          </div>
+            <div className="flex-1">
+              <QuoteIcon className="h-8 w-8 text-primary mb-4 opacity-60" />
+              <p className="text-foreground leading-relaxed mb-6 italic">
+                {/* Escape bằng HTML entities */}
+                &ldquo;{quote.text}&rdquo;
+              </p>
+            </div>
 
-          <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-16 bg-gradient-to-r from-white to-transparent md:block" aria-hidden="true" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-16 bg-gradient-to-l from-white to-transparent md:block" aria-hidden="true" />
-
-          <button
-            type="button"
-            onClick={() => handleNavigate("prev")}
-            className="pointer-events-auto absolute left-4 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-700 shadow-sm transition hover:bg-neutral-50 focus-visible:ring-2 focus-visible:ring-primary/60 md:flex"
-            aria-label="Xem câu trước"
-          >
-            <ArrowLeftIcon className="h-4 w-4" />
-          </button>
-
-          <button
-            type="button"
-            onClick={() => handleNavigate("next")}
-            className="pointer-events-auto absolute right-4 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-700 shadow-sm transition hover:bg-neutral-50 focus-visible:ring-2 focus-visible:ring-primary/60 md:flex"
-            aria-label="Xem câu tiếp theo"
-          >
-            <ArrowRightIcon className="h-4 w-4" />
-          </button>
-        </div>
-
-        <div className="mt-10 flex justify-center">
-          <div className="flex w-full max-w-xl overflow-hidden rounded-2xl border border-neutral-200 bg-white/90 text-sm font-semibold text-neutral-800 shadow-sm">
-            <button
-              type="button"
-              onClick={() => handleNavigate("prev")}
-              className="flex flex-1 items-center justify-center gap-2 px-4 py-3 transition hover:bg-neutral-50 focus-visible:ring-2 focus-visible:ring-primary/50"
-            >
-              <ArrowLeftIcon className="h-4 w-4" />
-              <span>Câu trước</span>
-            </button>
-            <button
-              type="button"
-              onClick={handleRandom}
-              className="flex flex-1 items-center justify-center gap-2 border-x border-neutral-200 px-4 py-3 transition hover:bg-neutral-50 focus-visible:ring-2 focus-visible:ring-primary/50"
-            >
-              <ShuffleIcon className="h-4 w-4" />
-              <span>Ngẫu nhiên</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => handleNavigate("next")}
-              className="flex flex-1 items-center justify-center gap-2 px-4 py-3 transition hover:bg-neutral-50 focus-visible:ring-2 focus-visible:ring-primary/50"
-            >
-              <span>Câu tiếp</span>
-              <ArrowRightIcon className="h-4 w-4" />
-            </button>
-          </div>
-        </div>
-
-        <div className="text-center mt-8">
-          <p className="text-sm text-muted-foreground">
-            Vuốt trái phải để xem thêm quotes
-          </p>
-        </div>
+            <div className="text-sm font-medium text-primary">
+              &mdash; {quote.author}
+            </div>
+          </article>
+        ))}
       </div>
-    </section>
+
+      {/* Gradient edges */}
+      <div
+        className="pointer-events-none absolute inset-y-0 left-0 hidden w-16 bg-gradient-to-r from-white to-transparent md:block"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-y-0 right-0 hidden w-16 bg-gradient-to-l from-white to-transparent md:block"
+        aria-hidden="true"
+      />
+
+      {/* Buttons */}
+      <button
+        type="button"
+        onClick={() => handleNavigate("prev")}
+        className="pointer-events-auto absolute left-4 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-700 shadow-sm transition hover:bg-neutral-50 focus-visible:ring-2 focus-visible:ring-primary/60 md:flex"
+        aria-label="Xem câu trước"
+      >
+        <ArrowLeftIcon className="h-4 w-4" />
+      </button>
+
+      <button
+        type="button"
+        onClick={() => handleNavigate("next")}
+        className="pointer-events-auto absolute right-4 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-700 shadow-sm transition hover:bg-neutral-50 focus-visible:ring-2 focus-visible:ring-primary/60 md:flex"
+        aria-label="Xem câu tiếp theo"
+      >
+        <ArrowRightIcon className="h-4 w-4" />
+      </button>
+    </div>
+
+    {/* Bottom buttons */}
+    <div className="mt-10 flex justify-center">
+      <div className="flex w-full max-w-xl overflow-hidden rounded-2xl border border-neutral-200 bg-white/90 text-sm font-semibold text-neutral-800 shadow-sm">
+        <button
+          type="button"
+          onClick={() => handleNavigate("prev")}
+          className="flex flex-1 items-center justify-center gap-2 px-4 py-3 transition hover:bg-neutral-50 focus-visible:ring-2 focus-visible:ring-primary/50"
+        >
+          <ArrowLeftIcon className="h-4 w-4" />
+          <span>Câu trước</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={handleRandom}
+          className="flex flex-1 items-center justify-center gap-2 border-x border-neutral-200 px-4 py-3 transition hover:bg-neutral-50 focus-visible:ring-2 focus-visible:ring-primary/50"
+        >
+          <ShuffleIcon className="h-4 w-4" />
+          <span>Ngẫu nhiên</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => handleNavigate("next")}
+          className="flex flex-1 items-center justify-center gap-2 px-4 py-3 transition hover:bg-neutral-50 focus-visible:ring-2 focus-visible:ring-primary/50"
+        >
+          <span>Câu tiếp</span>
+          <ArrowRightIcon className="h-4 w-4" />
+        </button>
+      </div>
+    </div>
+
+    <div className="text-center mt-8">
+      <p className="text-sm text-muted-foreground">
+        Vuốt trái phải để xem thêm quotes
+      </p>
+    </div>
+  </div>
+</section>
+
+  
   );
 };
 
