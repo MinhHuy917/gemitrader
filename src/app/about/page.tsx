@@ -42,7 +42,7 @@ const values = [
   {
     title: 'Thực tế',
     description:
-      'Không có lời hứa về lợi nhuận "thần thánh". Trading là một nghề đòi hỏi kỷ luật, kiên nhẫn và quản lý rủi ro. Tôi chia sẻ những gì thực sự hoạt động, không phải những điều nghe có vẻ hay.',
+      'Không có lời hứa về lợi nhuận &ldquo;thần thánh&rdquo;. Trading là một nghề đòi hỏi kỷ luật, kiên nhẫn và quản lý rủi ro. Tôi chia sẻ những gì thực sự hoạt động, không phải những điều nghe có vẻ hay.',
   },
   {
     title: 'Cộng đồng',
@@ -65,7 +65,7 @@ function MyStory() {
                 Hành trình của tôi bắt đầu từ năm 2017, khi tôi quyết định từ bỏ công việc văn phòng để theo đuổi đam mê trading. Những ngày đầu tiên không hề dễ dàng - tôi đã mất tiền, mất niềm tin, và nhiều lần muốn từ bỏ.
               </p>
               <p>
-                Nhưng chính những thất bại đó đã dạy tôi những bài học quý giá nhất: <strong className="text-neutral-950 dark:text-neutral-50">Trading không phải là đoán đúng hướng thị trường, mà là quản lý rủi ro khi bạn sai.</strong> Tôi học được rằng thành công trong trading không đến từ việc tìm ra "holy grail", mà từ việc tuân thủ nghiêm ngặt một hệ thống giao dịch có kỷ luật.
+                Nhưng chính những thất bại đó đã dạy tôi những bài học quý giá nhất: <strong className="text-neutral-950 dark:text-neutral-50">Trading không phải là đoán đúng hướng thị trường, mà là quản lý rủi ro khi bạn sai.</strong> Tôi học được rằng thành công trong trading không đến từ việc tìm ra &ldquo;holy grail&rdquo;, mà từ việc tuân thủ nghiêm ngặt một hệ thống giao dịch có kỷ luật.
               </p>
               <p>
                 Sau nhiều năm thử nghiệm, tôi đã xây dựng được hệ thống giao dịch của riêng mình - kết hợp phân tích kỹ thuật, quản lý vốn chặt chẽ, và tâm lý giao dịch vững vàng. Từ một trader thua lỗ liên tục, tôi đã trở thành một trader có thể kiếm sống từ nghề này.
