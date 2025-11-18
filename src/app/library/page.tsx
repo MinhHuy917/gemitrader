@@ -141,13 +141,13 @@ const stats = [
 
 function ResourceCard({ resource }: { resource: LibraryResource }) {
   return (
-    <div className="rounded-2xl border border-neutral-200 bg-white/70 p-5 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:shadow-lg">
+    <div className="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 p-5 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:shadow-lg">
       <div className="flex flex-col gap-2">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400 dark:text-neutral-300">
           {resource.format} • {resource.size}
         </p>
-        <h4 className="text-lg font-semibold text-neutral-900">{resource.title}</h4>
-        <p className="text-sm text-neutral-600">{resource.description}</p>
+        <h4 className="text-lg font-semibold text-neutral-900 dark:text-neutral-50">{resource.title}</h4>
+        <p className="text-sm text-neutral-600 dark:text-neutral-200">{resource.description}</p>
       </div>
       <Button href={resource.link} className="mt-6 w-full" aria-label={`Tải ${resource.title}`}>
         Tải ngay
@@ -169,14 +169,14 @@ export default function Library() {
         </PageIntro>
 
         <Container className="mt-16">
-          <div className="grid gap-6 rounded-3xl border border-neutral-200 bg-white/70 p-8 shadow-lg shadow-primary/10 lg:grid-cols-3">
+          <div className="grid gap-6 rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 p-8 shadow-lg shadow-primary/10 lg:grid-cols-3">
             {stats.map((stat) => (
-              <div key={stat.label} className="border-l border-neutral-100 pl-6 first:border-none first:pl-0">
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-neutral-400">
+              <div key={stat.label} className="border-l border-neutral-100 dark:border-neutral-800 pl-6 first:border-none first:pl-0">
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-neutral-400 dark:text-neutral-300">
                   {stat.label}
                 </p>
-                <p className="mt-2 text-3xl font-semibold text-neutral-950">{stat.value}</p>
-                <p className="mt-1 text-sm text-neutral-600">{stat.detail}</p>
+                <p className="mt-2 text-3xl font-semibold text-neutral-950 dark:text-neutral-50">{stat.value}</p>
+                <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-200">{stat.detail}</p>
               </div>
             ))}
           </div>
@@ -186,13 +186,13 @@ export default function Library() {
       <Container className="mt-24 space-y-16 sm:mt-32 lg:mt-40">
         {collections.map((collection) => (
           <FadeIn key={collection.id}>
-            <section className="grid gap-8 rounded-4xl border border-neutral-100 bg-white/90 p-8 shadow-xl shadow-neutral-900/5 lg:grid-cols-[1.1fr_0.9fr]">
+            <section className="grid gap-8 rounded-4xl border border-neutral-100 dark:border-neutral-800 bg-white/90 dark:bg-neutral-900/90 p-8 shadow-xl shadow-neutral-900/5 lg:grid-cols-[1.1fr_0.9fr]">
               <div className="flex flex-col gap-6">
-                <span className="inline-flex w-fit rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+                <span className="inline-flex w-fit rounded-full bg-primary/10 dark:bg-primary/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-primary dark:text-primary-400">
                   {collection.badge}
                 </span>
-                <h2 className="font-display text-3xl font-semibold text-neutral-950">{collection.title}</h2>
-                <p className="text-base leading-relaxed text-neutral-600">{collection.description}</p>
+                <h2 className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50">{collection.title}</h2>
+                <p className="text-base leading-relaxed text-neutral-600 dark:text-neutral-200">{collection.description}</p>
                 <div className="relative h-48 overflow-hidden rounded-3xl">
                   <Image
                     src={collection.thumbnail}

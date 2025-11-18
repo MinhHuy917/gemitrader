@@ -125,39 +125,39 @@ function CourseCard({
   course: (typeof courses)[number]
 }) {
   return (
-    <article className="relative flex w-full flex-col rounded-3xl bg-neutral-50 p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-100 sm:p-8">
+    <article className="relative flex w-full flex-col rounded-3xl bg-neutral-50 dark:bg-neutral-900 p-6 ring-1 ring-neutral-950/5 dark:ring-neutral-50/5 transition hover:bg-neutral-100 dark:hover:bg-neutral-800 sm:p-8">
       <div className="flex items-start justify-between">
         <div className="flex-1">
           <div className="flex items-center gap-x-2">
-            <span className="rounded-full bg-neutral-200 px-2 py-0.5 text-xs font-medium text-neutral-700">
+            <span className="rounded-full bg-neutral-200 dark:bg-neutral-800 px-2 py-0.5 text-xs font-medium text-neutral-700 dark:text-neutral-200">
               {course.level}
             </span>
-            <span className="rounded-full bg-neutral-200 px-2 py-0.5 text-xs font-medium text-neutral-700">
+            <span className="rounded-full bg-neutral-200 dark:bg-neutral-800 px-2 py-0.5 text-xs font-medium text-neutral-700 dark:text-neutral-200">
               {course.duration}
             </span>
           </div>
-          <h3 className="mt-4 font-display text-2xl font-semibold text-neutral-950">
+          <h3 className="mt-4 font-display text-2xl font-semibold text-neutral-950 dark:text-neutral-50">
             {course.title}
           </h3>
-          <p className="mt-2 text-sm text-neutral-600">
+          <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-200">
             Giảng viên: {course.instructor}
           </p>
-          <p className="mt-4 text-base text-neutral-600">{course.description}</p>
+          <p className="mt-4 text-base text-neutral-600 dark:text-neutral-200">{course.description}</p>
           <div className="mt-6">
-            <p className="text-sm font-semibold text-neutral-950">
+            <p className="text-sm font-semibold text-neutral-950 dark:text-neutral-50">
               Nội dung khoá học:
             </p>
-            <ul className="mt-2 space-y-1 text-sm text-neutral-600">
+            <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-200">
               {course.topics.map((topic, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="mr-2 text-neutral-400">•</span>
+                  <span className="mr-2 text-neutral-400 dark:text-neutral-400">•</span>
                   {topic}
                 </li>
               ))}
             </ul>
           </div>
           <div className="mt-6 flex items-center justify-between">
-            <span className="font-display text-xl font-semibold text-neutral-950">
+            <span className="font-display text-xl font-semibold text-neutral-950 dark:text-neutral-50">
               {course.price}
             </span>
             <Button
@@ -198,6 +198,8 @@ export default function Courses() {
     </>
   )
 }
+
+
 
 
 

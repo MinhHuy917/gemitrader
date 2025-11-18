@@ -1,7 +1,9 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Border } from '@/components/Border'
+import { Button } from '@/components/Button'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
@@ -10,178 +12,170 @@ import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StatList, StatListItem } from '@/components/StatList'
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
-import imageBlakeReid from '@/images/team/blake-reid.jpg'
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
-import imageDriesVincent from '@/images/team/dries-vincent.jpg'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
-import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg'
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
-import imageMichaelFoster from '@/images/team/michael-foster.jpg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
 import { loadArticles } from '@/lib/mdx'
+import imageLaptop from '@/images/laptop.jpg'
 
-function Culture() {
+const achievements = [
+  {
+    title: 'Kinh nghiệm thực chiến',
+    description:
+      'Hơn 7 năm giao dịch trên các thị trường Forex, Crypto và Chứng khoán với hàng nghìn lệnh đã thực hiện. Trải qua đầy đủ các giai đoạn từ người mới bắt đầu đến trader chuyên nghiệp.',
+  },
+  {
+    title: 'Hệ thống giao dịch được kiểm chứng',
+    description:
+      'Xây dựng và tối ưu hóa các chiến lược Breakout, Pullback, và Trend Following qua nhiều chu kỳ thị trường. Hệ thống quản lý rủi ro 2% rule đã được áp dụng thành công trong nhiều năm.',
+  },
+  {
+    title: 'Chia sẻ và giáo dục',
+    description:
+      'Đã hướng dẫn và đồng hành cùng hàng trăm trader trên hành trình phát triển. Tạo ra thư viện tài liệu miễn phí với hàng nghìn lượt tải về và phản hồi tích cực từ cộng đồng.',
+  },
+]
+
+const values = [
+  {
+    title: 'Minh bạch',
+    description:
+      'Tôi tin rằng sự minh bạch là nền tảng của lòng tin. Mọi chiến lược, kết quả giao dịch và bài học đều được chia sẻ công khai để bạn có thể học hỏi và đánh giá.',
+  },
+  {
+    title: 'Thực tế',
+    description:
+      'Không có lời hứa về lợi nhuận "thần thánh". Trading là một nghề đòi hỏi kỷ luật, kiên nhẫn và quản lý rủi ro. Tôi chia sẻ những gì thực sự hoạt động, không phải những điều nghe có vẻ hay.',
+  },
+  {
+    title: 'Cộng đồng',
+    description:
+      'Website này được tạo ra để xây dựng một cộng đồng trader hỗ trợ lẫn nhau. Mỗi người đều có thể học hỏi và phát triển cùng nhau thông qua việc chia sẻ kiến thức và kinh nghiệm.',
+  },
+]
+
+function MyStory() {
+  return (
+    <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <FadeIn>
+        <div className="lg:grid lg:grid-cols-2 lg:gap-16">
+          <div>
+            <h2 className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">
+              Câu chuyện của tôi
+            </h2>
+            <div className="mt-6 space-y-6 text-base text-neutral-600 dark:text-neutral-200">
+              <p>
+                Hành trình của tôi bắt đầu từ năm 2017, khi tôi quyết định từ bỏ công việc văn phòng để theo đuổi đam mê trading. Những ngày đầu tiên không hề dễ dàng - tôi đã mất tiền, mất niềm tin, và nhiều lần muốn từ bỏ.
+              </p>
+              <p>
+                Nhưng chính những thất bại đó đã dạy tôi những bài học quý giá nhất: <strong className="text-neutral-950 dark:text-neutral-50">Trading không phải là đoán đúng hướng thị trường, mà là quản lý rủi ro khi bạn sai.</strong> Tôi học được rằng thành công trong trading không đến từ việc tìm ra "holy grail", mà từ việc tuân thủ nghiêm ngặt một hệ thống giao dịch có kỷ luật.
+              </p>
+              <p>
+                Sau nhiều năm thử nghiệm, tôi đã xây dựng được hệ thống giao dịch của riêng mình - kết hợp phân tích kỹ thuật, quản lý vốn chặt chẽ, và tâm lý giao dịch vững vàng. Từ một trader thua lỗ liên tục, tôi đã trở thành một trader có thể kiếm sống từ nghề này.
+              </p>
+            </div>
+          </div>
+          <div className="mt-10 lg:mt-0">
+            <div className="relative overflow-hidden rounded-4xl bg-neutral-100">
+              <Image
+                alt="Trading workspace"
+                src={imageLaptop}
+                className="h-full w-full object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                placeholder="blur"
+              />
+            </div>
+          </div>
+        </div>
+      </FadeIn>
+    </Container>
+  )
+}
+
+function Achievements() {
+  return (
+    <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <SectionIntro
+        eyebrow="Thành tích & Kinh nghiệm"
+        title="Những gì tôi đã trải qua"
+      >
+        <p>
+          Hơn 7 năm trong thị trường đã cho tôi những trải nghiệm quý giá và những bài học không thể học được từ sách vở.
+        </p>
+      </SectionIntro>
+      <GridList className="mt-16">
+        {achievements.map((achievement) => (
+          <GridListItem key={achievement.title} title={achievement.title}>
+            {achievement.description}
+          </GridListItem>
+        ))}
+      </GridList>
+    </Container>
+  )
+}
+
+function Values() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
+        eyebrow="Giá trị cốt lõi"
+        title="Những điều tôi tin tưởng"
         invert
       >
         <p>
-          We are a group of like-minded people who share the same core values.
+          Website này được xây dựng dựa trên những giá trị mà tôi đã học được trong suốt hành trình trading của mình.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          {values.map((value) => (
+            <GridListItem key={value.title} title={value.title} invert>
+              {value.description}
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
-          </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
-          </GridListItem>
+          ))}
         </GridList>
       </Container>
     </div>
   )
 }
 
-const team = [
-  {
-    title: 'Leadership',
-    people: [
-      {
-        name: 'Leslie Alexander',
-        role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
-      },
-      {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
-      },
-      {
-        name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
-      },
-    ],
-  },
-  {
-    title: 'Team',
-    people: [
-      {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
-      },
-      {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
-      },
-      {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
-      },
-      {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
-        image: { src: imageBlakeReid },
-      },
-      {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
-      },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
-        role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
-      },
-    ],
-  },
-]
-
-function Team() {
+function Purpose() {
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
-      <div className="space-y-24">
-        {team.map((group) => (
-          <FadeInStagger key={group.title}>
-            <Border as={FadeIn} />
-            <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
               <FadeIn>
-                <h2 className="font-display text-2xl font-semibold text-neutral-950">
-                  {group.title}
+        <div className="rounded-4xl border border-neutral-200 dark:border-neutral-800 bg-gradient-to-br from-white via-white to-neutral-50 dark:from-neutral-900 dark:via-neutral-900 dark:to-neutral-950 p-8 shadow-xl shadow-primary/10 sm:p-12 lg:p-16">
+          <h2 className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">
+            Tại sao tôi tạo ra website này?
                 </h2>
-              </FadeIn>
-              <div className="lg:col-span-3">
-                <ul
-                  role="list"
-                  className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8"
-                >
-                  {group.people.map((person) => (
-                    <li key={person.name}>
-                      <FadeIn>
-                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
-                          <Image
-                            alt=""
-                            {...person.image}
-                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
-                            <p className="font-display text-base/6 font-semibold tracking-wide text-white">
-                              {person.name}
+          <div className="mt-8 space-y-6 text-base text-neutral-600 dark:text-neutral-200">
+            <p>
+              Sau nhiều năm trading, tôi nhận ra rằng <strong className="text-neutral-950 dark:text-neutral-50">kiến thức chỉ có giá trị khi được chia sẻ.</strong> Tôi đã từng là một người mới bắt đầu, đã từng mất tiền vì thiếu kiến thức, và đã từng cảm thấy lạc lõng trong hành trình này.
+            </p>
+            <p>
+              Website này được tạo ra với mục đích <strong className="text-neutral-950 dark:text-neutral-50">gieo duyên và chia sẻ</strong> - chia sẻ những gì tôi đã học được, những sai lầm tôi đã mắc phải, và những bài học quý giá mà tôi đã tích lũy qua hơn 7 năm trong thị trường.
+            </p>
+            <p>
+              Tôi không hứa hẹn bạn sẽ trở thành triệu phú sau khi đọc blog hay tham gia khóa học. Nhưng tôi cam kết sẽ chia sẻ với bạn những kiến thức thực tế, những chiến lược đã được kiểm chứng, và quan trọng nhất - <strong className="text-neutral-950 dark:text-neutral-50">cách tư duy đúng đắn về trading</strong>.
+            </p>
+            <p>
+              Nếu bạn cảm thấy những gì tôi chia sẻ có giá trị, tôi rất vui nếu bạn đăng ký tài khoản qua link của tôi hoặc tham gia các khóa học. Điều này giúp tôi duy trì website và tiếp tục tạo ra nội dung chất lượng cho cộng đồng.
                             </p>
-                            <p className="mt-2 text-sm text-white">
-                              {person.role}
-                            </p>
+                          </div>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Button href="/courses" className="w-full sm:w-auto">
+              Xem khóa học
+            </Button>
+            <Button href="/connect" className="w-full sm:w-auto" invert>
+              Đăng ký tài khoản
+            </Button>
                           </div>
                         </div>
                       </FadeIn>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </FadeInStagger>
-        ))}
-      </div>
     </Container>
   )
 }
 
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: 'Về tôi - Gemi Trader',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    'Tôi là một trader chuyên nghiệp với hơn 7 năm kinh nghiệm trong lĩnh vực giao dịch. Chia sẻ câu chuyện, kinh nghiệm và mục đích tạo ra website này.',
 }
 
 export default async function About() {
@@ -189,42 +183,34 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="Về tôi" title="Trader chuyên nghiệp với hơn 7 năm kinh nghiệm">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          Tôi là một trader chuyên nghiệp với hơn 7 năm kinh nghiệm trong lĩnh vực giao dịch. 
+          Hành trình của tôi từ một người mới bắt đầu đến trader có thể kiếm sống từ nghề này 
+          đã cho tôi những bài học quý giá mà tôi muốn chia sẻ với bạn.
         </p>
-        <div className="mt-10 max-w-2xl space-y-6 text-base">
-          <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
-          </p>
-          <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
-          </p>
-        </div>
       </PageIntro>
+
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
+          <StatListItem value="7+" label="Năm kinh nghiệm trading" />
+          <StatListItem value="1000+" label="Lệnh đã thực hiện" />
+          <StatListItem value="500+" label="Trader đã hướng dẫn" />
         </StatList>
       </Container>
 
-      <Culture />
+      <MyStory />
 
-      <Team />
+      <Achievements />
+
+      <Values />
+
+      <Purpose />
 
       <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
-        title="From the blog"
-        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
+        title="Bài viết mới nhất"
+        intro="Những bài viết về trading, phân tích thị trường và chia sẻ kinh nghiệm từ hành trình 7 năm của tôi."
         pages={blogArticles}
       />
 

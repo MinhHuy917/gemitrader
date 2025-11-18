@@ -18,6 +18,7 @@ import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
 import { Logo, Logomark } from '@/components/Logo'
+import { ThemeToggle } from '@/components/ThemeToggle'
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean
@@ -61,7 +62,7 @@ function Header({
   let pathname = usePathname()
 
   const navLinks = [
-    { href: '/news', label: 'News' },
+    { href: '/about', label: 'Về tôi' },
     { href: '/quotes', label: 'Quotes' },
     { href: '/blog', label: 'Blog' },
     { href: '/library', label: 'Thư viện' },
@@ -79,14 +80,15 @@ function Header({
           className="relative z-10 transition-transform duration-300 hover:scale-105"
         >
           <Logomark
-            className="h-9 sm:hidden"
+            className="sm:hidden"
             invert={invert}
             filled={logoHovered}
           />
           <Logo
-            className="hidden h-9 sm:block"
+            className="hidden sm:block"
             invert={invert}
             filled={logoHovered}
+            fillOnHover
           />
         </Link>
         
@@ -104,22 +106,24 @@ function Header({
                   isActive
                     ? invert
                       ? 'bg-white/20 text-white shadow-lg shadow-white/10'
-                      : 'bg-gradient-to-r from-neutral-950 to-neutral-800 text-white shadow-lg shadow-neutral-950/20'
+                      : 'bg-gradient-to-r from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 text-white dark:text-neutral-950 shadow-lg shadow-neutral-950/20 dark:shadow-neutral-50/20'
                     : invert
                       ? 'text-white/90 hover:text-white hover:bg-white/10'
-                      : 'text-neutral-700 hover:text-neutral-950 hover:bg-neutral-100',
+                      : 'text-neutral-700 dark:text-white hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800/50',
                 )}
               >
                 <span className="relative z-10">{link.label}</span>
                 {isActive && (
                   <motion.span
                     layoutId="activeNav"
-                    className="absolute inset-0 bg-gradient-to-r from-neutral-950 to-neutral-800 rounded-xl -z-0"
+                    className="absolute inset-0 bg-gradient-to-r from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 rounded-xl -z-0"
                     transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                   />
                 )}
                 {!isActive && !invert && (
-                  <span className="absolute inset-0 bg-gradient-to-r from-neutral-100 to-neutral-50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-0" />
+                  <>
+                    <span className="absolute inset-0 bg-gradient-to-r from-neutral-100 to-neutral-50 dark:from-neutral-800 dark:to-neutral-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-0" />
+                  </>
                 )}
               </Link>
             )
@@ -127,6 +131,7 @@ function Header({
         </nav>
 
         <div className="flex items-center gap-x-3 lg:gap-x-6">
+          <ThemeToggle className="hidden sm:flex" />
           <Link
             href="/connect"
             className={clsx(
@@ -134,12 +139,12 @@ function Header({
               'group overflow-hidden',
               invert
                 ? 'text-white/90 hover:text-white hover:bg-white/10'
-                : 'text-neutral-700 hover:text-neutral-950 hover:bg-neutral-100',
+                : 'text-neutral-700 dark:text-white hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800',
             )}
           >
             <span className="relative z-10">Kết nối</span>
             {!invert && (
-              <span className="absolute inset-0 bg-gradient-to-r from-neutral-100 to-neutral-50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-0" />
+              <span className="absolute inset-0 bg-gradient-to-r from-neutral-100 to-neutral-50 dark:from-neutral-800/50 dark:to-neutral-700/50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-0" />
             )}
           </Link>
           <button
@@ -163,7 +168,7 @@ function Header({
                 expanded && 'rotate-90',
                 invert
                   ? 'fill-white group-hover:fill-neutral-200'
-                  : 'fill-neutral-950 group-hover:fill-neutral-700',
+                  : 'fill-neutral-950 dark:fill-white group-hover:fill-neutral-700 dark:group-hover:fill-neutral-200',
               )}
             />
           </button>
@@ -209,7 +214,7 @@ function Navigation({
   onLinkClick?: () => void 
 }) {
   const navLinks = [
-    { href: '/news', label: 'News' },
+    { href: '/about', label: 'Về tôi' },
     { href: '/quotes', label: 'Quotes' },
     { href: '/blog', label: 'Blog' },
     { href: '/library', label: 'Thư viện' },
@@ -228,8 +233,8 @@ function Navigation({
               'relative block px-5 py-4 text-lg font-semibold rounded-xl transition-all duration-300',
               'group overflow-hidden',
               isActive
-                ? 'bg-gradient-to-r from-neutral-950 to-neutral-800 text-white shadow-lg shadow-neutral-950/20'
-                : 'text-neutral-700 hover:text-neutral-950 hover:bg-neutral-100',
+                ? 'bg-gradient-to-r from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 text-white dark:text-neutral-950 shadow-lg shadow-neutral-950/20 dark:shadow-neutral-50/20'
+                : 'text-neutral-700 dark:text-white hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800',
             )}
             onClick={onLinkClick}
           >
@@ -237,12 +242,12 @@ function Navigation({
             {isActive && (
               <motion.span
                 layoutId="activeNavMobile"
-                className="absolute inset-0 bg-gradient-to-r from-neutral-950 to-neutral-800 rounded-xl -z-0"
+                className="absolute inset-0 bg-gradient-to-r from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 rounded-xl -z-0"
                 transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
               />
             )}
             {!isActive && (
-              <span className="absolute inset-0 bg-gradient-to-r from-neutral-100 to-neutral-50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-0" />
+              <span className="absolute inset-0 bg-gradient-to-r from-neutral-100 to-neutral-50 dark:from-neutral-800 dark:to-neutral-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-0" />
             )}
           </Link>
         )
@@ -283,9 +288,9 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         {/* Fixed Header with Navigation */}
         <div className="fixed left-0 right-0 top-0 z-50">
           {/* Gradient Background with Glassmorphism */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white/95 backdrop-blur-xl" />
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white/95 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950/95 backdrop-blur-xl transition-colors duration-300" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px] transition-opacity duration-300" />
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neutral-200 dark:via-neutral-800 to-transparent transition-colors duration-300" />
           
           {/* Header Content */}
           <div className="relative pt-5 pb-5">
@@ -333,17 +338,19 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
             >
             <div className="relative">
               {/* Glassmorphism Background */}
-              <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-neutral-50/95 backdrop-blur-2xl" />
-              <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]" />
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-neutral-50/95 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-900/95 backdrop-blur-2xl transition-colors duration-300" />
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#80808005_1px,transparent_1px),linear-gradient(to_bottom,#80808005_1px,transparent_1px)] bg-[size:24px_24px] transition-opacity duration-300" />
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neutral-200 dark:via-neutral-800 to-transparent transition-colors duration-300" />
               
               <div className="relative">
                 <div ref={navRef} className="pb-16 pt-8">
                   <Container>
                     <div className="flex items-center justify-between mb-10">
-                      <h2 className="font-display text-2xl font-bold text-neutral-950">
+                      <h2 className="font-display text-2xl font-bold text-neutral-950 dark:text-neutral-50">
                         Menu
                       </h2>
+                      <div className="flex items-center gap-3">
+                        <ThemeToggle />
                       <button
                         ref={closeRef}
                         type="button"
@@ -356,8 +363,9 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
                         className="group relative -m-2.5 rounded-xl p-2.5 transition-all duration-300 hover:bg-neutral-950/10 hover:scale-110 active:scale-95"
                         aria-label="Close navigation"
                       >
-                        <XIcon className="h-6 w-6 fill-neutral-950 group-hover:fill-neutral-700 transition-colors" />
+                        <XIcon className="h-6 w-6 fill-neutral-950 dark:fill-neutral-50 group-hover:fill-neutral-700 dark:group-hover:fill-neutral-300 transition-colors" />
                       </button>
+                      </div>
                     </div>
                   </Container>
                 </div>
@@ -374,14 +382,14 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 
       <motion.div
         layout
-        className="relative flex flex-auto overflow-hidden bg-white"
+        className="relative flex flex-auto overflow-hidden bg-white dark:bg-neutral-950 transition-colors duration-300"
       >
         <motion.div
           layout
           className="relative isolate flex w-full flex-col pt-9"
         >
           <GridPattern
-            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
+            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 dark:fill-neutral-900 stroke-neutral-950/5 dark:stroke-neutral-50/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)] dark:[mask-image:linear-gradient(to_bottom_left,black_40%,transparent_50%)] transition-colors duration-300"
             yOffset={-96}
             interactive
           />

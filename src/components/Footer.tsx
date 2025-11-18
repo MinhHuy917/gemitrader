@@ -9,7 +9,6 @@ const navigation = [
   {
     title: 'Trading',
     links: [
-      { title: 'News', href: '/news' },
       { title: 'Quotes', href: '/quotes' },
       { title: 'Blog', href: '/blog' },
       { title: 'Thư viện', href: '/library' },
@@ -36,15 +35,15 @@ function Navigation() {
       <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
         {navigation.map((section, sectionIndex) => (
           <li key={sectionIndex}>
-            <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+            <div className="font-display text-sm font-semibold tracking-wider text-neutral-950 dark:text-neutral-50">
               {section.title}
             </div>
-            <ul role="list" className="mt-4 text-sm text-neutral-700">
+            <ul role="list" className="mt-4 text-sm text-neutral-700 dark:text-neutral-200">
               {section.links.map((link, linkIndex) => (
                 <li key={linkIndex} className="mt-4">
                   <Link
                     href={link.href}
-                    className="transition hover:text-neutral-950"
+                    className="transition hover:text-neutral-950 dark:hover:text-neutral-50"
                   >
                     {link.title}
                   </Link>
@@ -74,10 +73,10 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 function NewsletterForm() {
   return (
     <form className="max-w-sm">
-      <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+      <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950 dark:text-neutral-50">
         Đăng ký nhận bản tin
       </h2>
-      <p className="mt-4 text-sm text-neutral-700">
+      <p className="mt-4 text-sm text-neutral-700 dark:text-neutral-200">
         Đăng ký để nhận tin tức mới nhất về thị trường, bài viết, tài liệu và
         các cập nhật từ Gemi Trader.
       </p>
@@ -87,7 +86,7 @@ function NewsletterForm() {
           placeholder="Email address"
           autoComplete="email"
           aria-label="Email address"
-          className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
+          className="block w-full rounded-2xl border border-neutral-300 dark:border-neutral-700 bg-transparent dark:bg-neutral-900 py-4 pl-6 pr-20 text-base/6 text-neutral-950 dark:text-neutral-50 ring-4 ring-transparent transition placeholder:text-neutral-500 dark:placeholder:text-neutral-400 focus:border-neutral-950 dark:focus:border-neutral-50 focus:outline-none focus:ring-neutral-950/5 dark:focus:ring-neutral-50/5"
         />
         <div className="absolute inset-y-1 right-1 flex justify-end">
           <button
@@ -113,11 +112,11 @@ export function Footer() {
             <NewsletterForm />
           </div>
         </div>
-        <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
+        <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 dark:border-neutral-50/10 pt-12">
           <Link href="/" aria-label="Home">
-            <Logo className="h-8" fillOnHover />
+            <Logo fillOnHover />
           </Link>
-          <p className="text-sm text-neutral-700">
+          <p className="text-sm text-neutral-700 dark:text-neutral-200">
             © Gemi Trader {new Date().getFullYear()}
           </p>
         </div>

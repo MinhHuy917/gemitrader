@@ -45,6 +45,8 @@ const brokerLinks = [
       'Đăng ký qua link chính thức của Gemi Trader để nhận hướng dẫn thiết lập tài khoản, chiến lược ưu tiên và tham gia nhóm hỗ trợ riêng.',
     cta: 'Mở tài khoản Exness',
     href: 'https://www.exness.com/',
+    icon: '📈',
+    gradient: 'from-[#003d82] via-[#0052a3] to-[#0066cc]',
   },
   {
     name: 'Binance',
@@ -52,6 +54,8 @@ const brokerLinks = [
       'Nhận bộ tài liệu quản lý vốn cho crypto futures + quyền truy cập nhóm tín hiệu khi xác minh tài khoản Binance thành công.',
     cta: 'Mở tài khoản Binance',
     href: 'https://www.binance.com/',
+    icon: '₿',
+    gradient: 'from-[#f3ba2f] via-[#f0b90b] to-[#f3ba2f]',
   },
 ]
 
@@ -60,15 +64,68 @@ export const metadata: Metadata = {
     'Gemi Trader – chia sẻ chiến lược, nhật ký giao dịch và thư viện tài liệu trading miễn phí.',
 }
 
+function AboutPreview() {
+  return (
+    <section className="mt-24 sm:mt-32 lg:mt-40">
+      <Container>
+        <FadeIn>
+          <div className="rounded-4xl border border-neutral-200 dark:border-neutral-800 bg-gradient-to-br from-white via-white to-neutral-50 dark:from-neutral-900 dark:via-neutral-900 dark:to-neutral-950 p-8 shadow-xl shadow-primary/10 sm:p-12 lg:p-16">
+            <div className="flex flex-col gap-4">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary dark:text-primary-400">Về tôi</p>
+              <h2 className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">
+                Trader chuyên nghiệp với hơn 7 năm kinh nghiệm
+              </h2>
+              <p className="max-w-3xl text-base text-neutral-600 dark:text-neutral-300">
+                Tôi là một trader chuyên nghiệp với hơn 7 năm kinh nghiệm trong lĩnh vực giao dịch. 
+                Hành trình của tôi từ một người mới bắt đầu đến trader có thể kiếm sống từ nghề này 
+                đã cho tôi những bài học quý giá mà tôi muốn chia sẻ với bạn.
+              </p>
+            </div>
+            <div className="mt-8 grid gap-6 sm:grid-cols-3">
+              <div className="flex flex-col">
+                <div className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">7+</div>
+                <div className="mt-2 text-base text-neutral-600 dark:text-neutral-300">Năm kinh nghiệm trading</div>
+              </div>
+              <div className="flex flex-col">
+                <div className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">1000+</div>
+                <div className="mt-2 text-base text-neutral-600 dark:text-neutral-300">Lệnh đã thực hiện</div>
+              </div>
+              <div className="flex flex-col">
+                <div className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">500+</div>
+                <div className="mt-2 text-base text-neutral-600 dark:text-neutral-300">Trader đã hướng dẫn</div>
+              </div>
+            </div>
+            <div className="mt-8 space-y-4 text-base text-neutral-600 dark:text-neutral-300">
+              <p>
+                Sau nhiều năm trading, tôi nhận ra rằng <strong className="text-neutral-950 dark:text-neutral-50">kiến thức chỉ có giá trị khi được chia sẻ.</strong> 
+                Website này được tạo ra với mục đích gieo duyên và chia sẻ - chia sẻ những gì tôi đã học được, 
+                những sai lầm tôi đã mắc phải, và những bài học quý giá mà tôi đã tích lũy qua hơn 7 năm trong thị trường.
+              </p>
+              <p>
+                Tôi không hứa hẹn bạn sẽ trở thành triệu phú sau khi đọc blog hay tham gia khóa học. 
+                Nhưng tôi cam kết sẽ chia sẻ với bạn những kiến thức thực tế, những chiến lược đã được kiểm chứng, 
+                và quan trọng nhất - <strong className="text-neutral-950 dark:text-neutral-50">cách tư duy đúng đắn về trading</strong>.
+              </p>
+            </div>
+            <Button href="/about" className="mt-8 w-fit">
+              Đọc thêm về tôi
+            </Button>
+          </div>
+        </FadeIn>
+      </Container>
+    </section>
+  )
+}
+
 function InsightsPreview({ articles }: { articles: Awaited<ReturnType<typeof loadArticles>> }) {
   return (
     <section className="mt-24 sm:mt-32 lg:mt-40">
       <div className="flex flex-col gap-4">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Blog mới nhất</p>
-        <h2 className="font-display text-3xl font-semibold text-neutral-950 sm:text-4xl">
-          Bản tin thị trường & góc nhìn giao dịch
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary dark:text-primary-400">Blog mới nhất</p>
+        <h2 className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">
+          Góc nhận định thị trường hằng tuần
         </h2>
-        <p className="max-w-3xl text-base text-neutral-600">
+        <p className="max-w-3xl text-base text-neutral-600 dark:text-neutral-300">
           Những bài viết ngắn giúp bạn cập nhật cơ hội, tâm lý và hệ thống giao dịch mà tôi đang sử dụng.
           Toàn bộ bài viết đều được SEO chuẩn để bạn dễ dàng chia sẻ lại cho cộng đồng.
         </p>
@@ -76,23 +133,23 @@ function InsightsPreview({ articles }: { articles: Awaited<ReturnType<typeof loa
       <FadeInStagger className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {articles.map((article, index) => (
           <FadeIn key={article.href}>
-            <article className="flex h-full flex-col rounded-[32px] bg-white px-6 py-7 shadow-[0_25px_60px_rgba(15,23,42,0.08)]">
-              <div className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-400">
+            <article className="flex h-full flex-col rounded-[32px] bg-white dark:bg-neutral-900 px-6 py-7 shadow-[0_25px_60px_rgba(15,23,42,0.08)] dark:shadow-[0_25px_60px_rgba(0,0,0,0.3)]">
+              <div className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-400 dark:text-neutral-500">
                 {formatDate(article.date).toUpperCase()}
               </div>
-              <h3 className="mt-4 font-display text-xl font-semibold text-neutral-950">
-                <Link href={article.href}>{article.title}</Link>
+              <h3 className="mt-4 font-display text-xl font-semibold text-neutral-950 dark:text-neutral-50">
+                <Link href={article.href} className="hover:text-primary-500 dark:hover:text-primary-400 transition-colors">{article.title}</Link>
               </h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-600">{article.description}</p>
-              <div className="mt-5 flex items-center gap-3 text-sm text-neutral-500">
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">{article.description}</p>
+              <div className="mt-5 flex items-center gap-3 text-sm text-neutral-500 dark:text-neutral-400">
                 <Image
                   alt={article.author.name}
                   {...article.author.image}
                   className="h-10 w-10 rounded-full object-cover"
                 />
                 <div>
-                  <p className="font-semibold text-neutral-900">{article.author.name}</p>
-                  <p>{article.author.role}</p>
+                  <p className="font-semibold text-neutral-900 dark:text-neutral-100">{article.author.name}</p>
+                  <p className="text-neutral-500 dark:text-neutral-400">{article.author.role}</p>
                 </div>
               </div>
               <Button href={article.href} className="mt-6 w-fit" aria-label={`Đọc: ${article.title}`}>
@@ -108,13 +165,13 @@ function InsightsPreview({ articles }: { articles: Awaited<ReturnType<typeof loa
 
 function LibraryPreview() {
   return (
-    <section className="mt-24 rounded-4xl border border-neutral-200 bg-white/90 p-8 shadow-xl shadow-primary/10 sm:mt-32 lg:mt-40">
+    <section className="mt-24 rounded-4xl border border-neutral-200 dark:border-neutral-800 bg-white/90 dark:bg-neutral-900/90 p-8 shadow-xl shadow-primary/10 sm:mt-32 lg:mt-40">
       <div className="flex flex-col gap-4">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Thư viện tải miễn phí</p>
-        <h2 className="font-display text-3xl font-semibold text-neutral-950 sm:text-4xl">
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary dark:text-primary-400">Thư viện tải miễn phí</p>
+        <h2 className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">
           Ebook, slide và template quản lý vốn
         </h2>
-        <p className="max-w-3xl text-base text-neutral-600">
+        <p className="max-w-3xl text-base text-neutral-600 dark:text-neutral-300">
           Tổng hợp tài nguyên mà tôi thường nhắc trên các buổi livestream. Bạn có thể tải ngay và áp dụng vào hệ thống giao dịch của mình.
         </p>
       </div>
@@ -122,7 +179,7 @@ function LibraryPreview() {
         {libraryHighlights.map((item) => (
           <article
             key={item.title}
-            className="flex flex-col rounded-3xl border border-neutral-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+            className="flex flex-col rounded-3xl border border-neutral-100 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
           >
             <div className="relative h-44 overflow-hidden rounded-2xl">
               <Image
@@ -133,11 +190,11 @@ function LibraryPreview() {
                 placeholder="blur"
               />
             </div>
-            <div className="mt-4 text-xs font-semibold uppercase tracking-[0.3em] text-neutral-400">
+            <div className="mt-4 text-xs font-semibold uppercase tracking-[0.3em] text-neutral-400 dark:text-neutral-300">
               {item.format}
             </div>
-            <h3 className="mt-3 text-lg font-semibold text-neutral-950">{item.title}</h3>
-            <p className="mt-2 flex-1 text-sm text-neutral-600">{item.detail}</p>
+            <h3 className="mt-3 text-lg font-semibold text-neutral-950 dark:text-neutral-50">{item.title}</h3>
+            <p className="mt-2 flex-1 text-sm text-neutral-600 dark:text-neutral-200">{item.detail}</p>
             <Button href={item.link} className="mt-4 w-fit">
               Tải tài liệu
             </Button>
@@ -152,35 +209,134 @@ function BrokerCTA() {
   return (
     <section className="mt-24 sm:mt-32 lg:mt-40">
       <div className="flex flex-col gap-4">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Nhóm hỗ trợ Gemi Trader</p>
-        <h2 className="font-display text-3xl font-semibold text-neutral-950 sm:text-4xl">
-          Đăng ký Exness / Binance để vào nhóm coaching
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary dark:text-primary-400">Nhóm VIP Gemi Trader</p>
+        <h2 className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">
+          Tham gia nhóm VIP - Hỗ trợ trading chuyên nghiệp
         </h2>
-        <p className="max-w-3xl text-base text-neutral-600">
-          Hoàn tất đăng ký qua link dưới đây, gửi mã UID cho đội ngũ hỗ trợ, bạn sẽ nhận được quyền truy cập nhóm tín hiệu Telegram + buổi coaching hàng tuần.
+        <p className="max-w-3xl text-base text-neutral-600 dark:text-neutral-200">
+          Đăng ký tài khoản qua link ref của Gemi Trader tại Exness hoặc Binance, nạp tối thiểu $200, 
+          và nhận quyền truy cập nhóm VIP với hỗ trợ trading chuyên nghiệp, tín hiệu chất lượng cao và cộng đồng trader chuyên nghiệp.
         </p>
       </div>
+      
+      {/* Steps */}
+      <div className="mt-10 rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-gradient-to-br from-neutral-50 to-white dark:from-neutral-900 dark:to-neutral-950 p-8 shadow-lg sm:p-10">
+        <h3 className="font-display text-xl font-semibold text-neutral-950 dark:text-neutral-50 mb-6">Các bước tham gia nhóm VIP:</h3>
+        <div className="grid gap-4 sm:grid-cols-3">
+          <div className="flex items-start gap-4 rounded-2xl bg-white dark:bg-neutral-900 p-5 shadow-sm">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 text-white dark:text-neutral-950 font-bold text-lg">
+              1
+            </div>
+            <div>
+              <h4 className="font-semibold text-neutral-950 dark:text-neutral-50">Đăng ký tài khoản</h4>
+              <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-200">Chọn một trong hai sàn Exness hoặc Binance và đăng ký qua link ref của Gemi Trader</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4 rounded-2xl bg-white dark:bg-neutral-900 p-5 shadow-sm">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 text-white dark:text-neutral-950 font-bold text-lg">
+              2
+            </div>
+            <div>
+              <h4 className="font-semibold text-neutral-950 dark:text-neutral-50">Nạp tối thiểu $200</h4>
+              <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-200">Nạp tối thiểu $200 vào tài khoản để đảm bảo bạn sẵn sàng bắt đầu trading</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4 rounded-2xl bg-white dark:bg-neutral-900 p-5 shadow-sm">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 text-white dark:text-neutral-950 font-bold text-lg">
+              3
+            </div>
+            <div>
+              <h4 className="font-semibold text-neutral-950 dark:text-neutral-50">Nhắn tin cho Gemi</h4>
+              <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-200">Gửi mã UID và thông tin tài khoản để được thêm vào nhóm VIP Telegram</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Broker Cards */}
       <div className="mt-10 grid gap-6 lg:grid-cols-2">
         {brokerLinks.map((broker) => (
           <article
             key={broker.name}
-            className="flex flex-col rounded-3xl border border-neutral-200 bg-gradient-to-br from-white via-white to-neutral-50 p-6 shadow-[0_25px_60px_rgba(15,23,42,0.05)]"
+            className="group relative overflow-hidden rounded-3xl bg-gradient-to-br p-8 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
+            style={{
+              background: `linear-gradient(135deg, ${broker.gradient.includes('from-') ? 'var(--gradient)' : 'transparent'})`,
+            }}
           >
-            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">{broker.name}</div>
-            <h3 className="mt-3 text-2xl font-semibold text-neutral-950">
-              Tham gia nhóm hỗ trợ {broker.name}
-            </h3>
-            <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-600">{broker.description}</p>
-            <div className="mt-6 flex flex-wrap gap-3 text-xs text-neutral-500">
-              <span>Ưu tiên khớp lệnh</span>
-              <span>Checklist quản lý vốn</span>
-              <span>Nhóm tín hiệu riêng</span>
+            <div className={`absolute inset-0 bg-gradient-to-br ${broker.gradient} opacity-95`} />
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:24px_24px]" />
+            <div className="relative z-10">
+              <div className="flex items-start gap-4">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-md border border-white/30 shadow-lg">
+                  <span className="text-4xl">{broker.icon}</span>
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="font-display text-2xl font-semibold text-white drop-shadow-lg">
+                      {broker.name}
+                    </h3>
+                    <span className="rounded-full bg-yellow-400/90 px-3 py-1 text-xs font-bold text-neutral-950 uppercase tracking-wide">
+                      VIP
+                    </span>
+                  </div>
+                  <p className="text-base text-white/90 leading-relaxed drop-shadow-sm">
+                    {broker.description}
+                  </p>
+                  <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-white">
+                    <span>Đăng ký ngay để vào nhóm VIP</span>
+                    <span className="transition-transform duration-300 group-hover:translate-x-1">
+                      →
+                    </span>
+                  </div>
+                  <Button 
+                    href={broker.href} 
+                    className="mt-6 w-fit bg-white text-neutral-950 hover:bg-neutral-100" 
+                    target="_blank" 
+                    rel="noreferrer"
+                  >
+                    {broker.cta}
+                  </Button>
+                </div>
+              </div>
             </div>
-            <Button href={broker.href} className="mt-6 w-fit" target="_blank" rel="noreferrer">
-              {broker.cta}
-            </Button>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
           </article>
         ))}
+      </div>
+
+      {/* Benefits */}
+      <div className="mt-10 rounded-3xl border border-neutral-200 bg-gradient-to-br from-neutral-950 to-neutral-900 p-8 text-white sm:p-10">
+        <h3 className="font-display text-2xl font-semibold mb-6">Lợi ích khi tham gia nhóm VIP:</h3>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {[
+            'Tín hiệu trading chất lượng cao, được phân tích kỹ lưỡng',
+            'Hỗ trợ phân tích thị trường real-time từ Gemi Trader',
+            'Tư vấn chiến lược giao dịch cá nhân hóa',
+            'Thảo luận với cộng đồng trader chuyên nghiệp',
+            'Nhận checklist quản lý vốn và risk management',
+            'Ưu tiên khớp lệnh và hỗ trợ kỹ thuật 24/7',
+          ].map((benefit, index) => (
+            <div key={index} className="flex items-start gap-3 rounded-xl bg-white/5 p-4 backdrop-blur-sm border border-white/10">
+              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-500/20 text-green-400 font-bold">
+                ✓
+              </span>
+              <span className="text-base text-neutral-200">{benefit}</span>
+            </div>
+          ))}
+        </div>
+        <div className="mt-8 rounded-2xl bg-gradient-to-br from-yellow-500/20 via-yellow-500/10 to-transparent border border-yellow-500/30 p-6 backdrop-blur-sm">
+          <div className="flex items-start gap-3">
+            <span className="text-2xl">💬</span>
+            <div>
+              <p className="text-base font-semibold text-yellow-400">
+                Sau khi đăng ký và nạp tối thiểu $200:
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-neutral-300">
+                Gửi mã UID và screenshot nạp tiền cho Gemi Trader qua Telegram hoặc Facebook để được thêm vào nhóm VIP ngay lập tức.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
@@ -191,16 +347,8 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Gemi Trader
-          </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            Tôi là một trader chuyên nghiệp với hơn 7 năm kinh nghiệm trong lĩnh vực giao dịch.
-          </p>
-        </FadeIn>
-      </Container>
+      <AboutPreview />
+
       <div className="mt-16 sm:mt-24 lg:mt-28">
         <QuotesShowcase />
       </div>

@@ -216,7 +216,7 @@ function SocialCard({
               <div className="flex-1">
                 <h3 className={clsx(
                   'font-display text-lg font-semibold drop-shadow-sm',
-                  isDark ? 'text-white' : 'text-neutral-950'
+                  isDark ? 'text-white' : 'text-neutral-950 dark:text-neutral-50'
                 )}>
                   {social.name}
                 </h3>
@@ -224,7 +224,7 @@ function SocialCard({
                   'mt-1 inline-block rounded-full px-2 py-0.5 text-xs font-medium backdrop-blur-sm',
                   isDark
                     ? 'bg-white/20 border border-white/30 text-white'
-                    : 'bg-white/80 text-neutral-700'
+                    : 'bg-white/80 dark:bg-neutral-800/80 text-neutral-700 dark:text-neutral-200'
                 )}>
                   {social.platform}
                 </span>
@@ -232,13 +232,13 @@ function SocialCard({
             </div>
             <p className={clsx(
               'mt-4 text-sm leading-relaxed drop-shadow-sm',
-              isDark ? 'text-white/90' : 'text-neutral-700'
+              isDark ? 'text-white/90' : 'text-neutral-700 dark:text-neutral-200'
             )}>
               {social.description}
             </p>
             <div className={clsx(
               'mt-4 flex items-center gap-x-2 text-xs font-semibold',
-              isDark ? 'text-white/80' : 'text-neutral-600'
+              isDark ? 'text-white/80' : 'text-neutral-600 dark:text-neutral-200'
             )}>
               <span>Khám phá ngay</span>
               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -357,10 +357,10 @@ export default function Connect() {
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         <FadeIn>
           <div className="text-center lg:text-left">
-            <h2 className="font-display text-3xl font-semibold text-neutral-950 sm:text-4xl">
+            <h2 className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">
               Đăng ký tài khoản sàn giao dịch
             </h2>
-            <p className="mt-4 text-lg text-neutral-600 max-w-2xl mx-auto lg:mx-0">
+            <p className="mt-4 text-lg text-neutral-600 dark:text-neutral-200 max-w-2xl mx-auto lg:mx-0">
               Đăng ký qua link ref của Gemi Trader để ủng hộ và nhận được hỗ trợ tốt
               nhất từ chúng tôi. Mỗi đăng ký giúp chúng tôi tiếp tục tạo nội dung chất lượng.
             </p>
@@ -379,10 +379,10 @@ export default function Connect() {
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         <FadeIn>
           <div className="text-center lg:text-left">
-            <h2 className="font-display text-3xl font-semibold text-neutral-950 sm:text-4xl">
+            <h2 className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">
               Kết nối mạng xã hội
             </h2>
-            <p className="mt-4 text-lg text-neutral-600 max-w-2xl mx-auto lg:mx-0">
+            <p className="mt-4 text-lg text-neutral-600 dark:text-neutral-200 max-w-2xl mx-auto lg:mx-0">
               Theo dõi Gemi Trader trên các nền tảng để nhận thông tin, tips trading
               mới nhất và không bỏ lỡ bất kỳ cơ hội nào.
             </p>
