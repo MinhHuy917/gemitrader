@@ -23,11 +23,8 @@ export default {
         '4xl': '2.5rem',
       },
       fontFamily: {
-        sans: ['Mona Sans', ...defaultTheme.fontFamily.sans],
-        display: [
-          ['Mona Sans', ...defaultTheme.fontFamily.sans],
-          { fontVariationSettings: '"wdth" 125' },
-        ],
+        sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
+        display: ['var(--font-display)', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {

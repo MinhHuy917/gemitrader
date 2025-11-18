@@ -1,9 +1,22 @@
 import { type Metadata } from 'next'
+import { Inter, Space_Grotesk } from 'next/font/google'
 
 import { RootLayout } from '@/components/RootLayout'
 import { ThemeProvider } from '@/components/ThemeProvider'
 
 import '@/styles/tailwind.css'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sans',
+})
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-display',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -74,7 +87,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           }}
         />
       </head>
-      <body className="flex min-h-full flex-col bg-white text-neutral-950 antialiased transition-colors duration-300 dark:bg-neutral-950 dark:text-neutral-50">
+      <body
+        className={`${inter.variable} ${spaceGrotesk.variable} flex min-h-full flex-col bg-white text-neutral-950 antialiased transition-colors duration-300 dark:bg-neutral-950 dark:text-neutral-50`}
+      >
         <ThemeProvider>
           <RootLayout>{children}</RootLayout>
         </ThemeProvider>

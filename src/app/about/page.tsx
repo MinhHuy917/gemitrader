@@ -15,21 +15,21 @@ import { StatList, StatListItem } from '@/components/StatList'
 import { loadArticles } from '@/lib/mdx'
 import imageLaptop from '@/images/laptop.jpg'
 
-const achievements = [
+const milestones = [
   {
-    title: 'Kinh nghiệm thực chiến',
+    title: 'Bắt đầu với vài trăm đô',
     description:
-      'Hơn 7 năm giao dịch trên các thị trường Forex, Crypto và Chứng khoán với hàng nghìn lệnh đã thực hiện. Trải qua đầy đủ các giai đoạn từ người mới bắt đầu đến trader chuyên nghiệp.',
+      'Năm 2017 tôi mở tài khoản đầu tiên bằng số tiền tiết kiệm nhỏ. Lên đỉnh, rơi xuống đáy, học cách đặt dừng lỗ và hiểu thị trường không quan tâm tôi là ai.',
   },
   {
-    title: 'Hệ thống giao dịch được kiểm chứng',
+    title: 'Chuyển sang sống bằng trading',
     description:
-      'Xây dựng và tối ưu hóa các chiến lược Breakout, Pullback, và Trend Following qua nhiều chu kỳ thị trường. Hệ thống quản lý rủi ro 2% rule đã được áp dụng thành công trong nhiều năm.',
+      'Sau nhiều năm ghi chép và backtest, tôi giữ kỷ luật với 1-2 setup quen thuộc, giao dịch nhẹ nhàng hơn và đủ tự tin nghỉ hẳn công việc văn phòng.',
   },
   {
-    title: 'Chia sẻ và giáo dục',
+    title: 'Viết và chia sẻ',
     description:
-      'Đã hướng dẫn và đồng hành cùng hàng trăm trader trên hành trình phát triển. Tạo ra thư viện tài liệu miễn phí với hàng nghìn lượt tải về và phản hồi tích cực từ cộng đồng.',
+      'Tôi lập website này để lưu lại những gì mình làm mỗi tuần: ý tưởng giao dịch, checklist và các ghi chú tâm lý. Nếu nó giúp được bạn, xem như chúng ta có duyên.',
   },
 ]
 
@@ -37,17 +37,17 @@ const values = [
   {
     title: 'Minh bạch',
     description:
-      'Tôi tin rằng sự minh bạch là nền tảng của lòng tin. Mọi chiến lược, kết quả giao dịch và bài học đều được chia sẻ công khai để bạn có thể học hỏi và đánh giá.',
+      'Tôi đăng cả lệnh đẹp lẫn lệnh xấu. Trading không hoàn hảo và mọi người cần nhìn thấy thực tế đó.',
   },
   {
     title: 'Thực tế',
     description:
-      'Không có lời hứa về lợi nhuận &ldquo;thần thánh&rdquo;. Trading là một nghề đòi hỏi kỷ luật, kiên nhẫn và quản lý rủi ro. Tôi chia sẻ những gì thực sự hoạt động, không phải những điều nghe có vẻ hay.',
+      'Không có lời hứa về lợi nhuận &ldquo;thần thánh&rdquo;. Trading là nghề buồn tẻ: vào lệnh ít, ngồi chờ nhiều.',
   },
   {
     title: 'Cộng đồng',
     description:
-      'Website này được tạo ra để xây dựng một cộng đồng trader hỗ trợ lẫn nhau. Mỗi người đều có thể học hỏi và phát triển cùng nhau thông qua việc chia sẻ kiến thức và kinh nghiệm.',
+      'Tôi muốn gom những người có cùng nhịp giao dịch vào một nhóm nhỏ để cùng nhau trao đổi thẳng thắn.',
   },
 ]
 
@@ -62,13 +62,13 @@ function MyStory() {
             </h2>
             <div className="mt-6 space-y-6 text-base text-neutral-600 dark:text-neutral-200">
               <p>
-                Hành trình của tôi bắt đầu từ năm 2017, khi tôi quyết định từ bỏ công việc văn phòng để theo đuổi đam mê trading. Những ngày đầu tiên không hề dễ dàng - tôi đã mất tiền, mất niềm tin, và nhiều lần muốn từ bỏ.
+                Tôi đến với trading giống hầu hết mọi người: xem video trên YouTube, tham gia vài nhóm tín hiệu rồi đốt toàn bộ tài khoản đầu tiên trong vòng hai tháng.
               </p>
               <p>
-                Nhưng chính những thất bại đó đã dạy tôi những bài học quý giá nhất: <strong className="text-neutral-950 dark:text-neutral-50">Trading không phải là đoán đúng hướng thị trường, mà là quản lý rủi ro khi bạn sai.</strong> Tôi học được rằng thành công trong trading không đến từ việc tìm ra &ldquo;holy grail&rdquo;, mà từ việc tuân thủ nghiêm ngặt một hệ thống giao dịch có kỷ luật.
+                Tôi chỉ thực sự tiến bộ khi bắt đầu ghi lại từng lệnh, đọc lại cảm xúc của mình và nhận ra <strong className="text-neutral-950 dark:text-neutral-50">kỷ luật mới là phần khó nhất.</strong> Từ đó tôi cắt bớt chỉ báo, giữ 1-2 setup và giao dịch ít hơn.
               </p>
               <p>
-                Sau nhiều năm thử nghiệm, tôi đã xây dựng được hệ thống giao dịch của riêng mình - kết hợp phân tích kỹ thuật, quản lý vốn chặt chẽ, và tâm lý giao dịch vững vàng. Từ một trader thua lỗ liên tục, tôi đã trở thành một trader có thể kiếm sống từ nghề này.
+                Website này là nơi tôi viết lại những gì đã xảy ra trên thị trường tuần này, tại sao tôi vào lệnh, vì sao tôi sai và tôi sẽ cải thiện như thế nào. Nó giúp tôi giữ mình ở chế độ học tập liên tục.
               </p>
             </div>
           </div>
@@ -93,17 +93,15 @@ function Achievements() {
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <SectionIntro
-        eyebrow="Thành tích & Kinh nghiệm"
-        title="Những gì tôi đã trải qua"
+        eyebrow="Những cột mốc nhỏ"
+        title="Tôi đã trải qua những gì"
       >
-        <p>
-          Hơn 7 năm trong thị trường đã cho tôi những trải nghiệm quý giá và những bài học không thể học được từ sách vở.
-        </p>
+        <p>Không phải thành tích to tát, chỉ là vài cột mốc nhắc tôi đi đúng hướng.</p>
       </SectionIntro>
       <GridList className="mt-16">
-        {achievements.map((achievement) => (
-          <GridListItem key={achievement.title} title={achievement.title}>
-            {achievement.description}
+        {milestones.map((milestone) => (
+          <GridListItem key={milestone.title} title={milestone.title}>
+            {milestone.description}
           </GridListItem>
         ))}
       </GridList>
@@ -142,22 +140,17 @@ function Purpose() {
               <FadeIn>
         <div className="rounded-4xl border border-neutral-200 dark:border-neutral-800 bg-gradient-to-br from-white via-white to-neutral-50 dark:from-neutral-900 dark:via-neutral-900 dark:to-neutral-950 p-8 shadow-xl shadow-primary/10 sm:p-12 lg:p-16">
           <h2 className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">
-            Tại sao tôi tạo ra website này?
+            Vì sao tôi tạo website này
                 </h2>
           <div className="mt-8 space-y-6 text-base text-neutral-600 dark:text-neutral-200">
             <p>
-              Sau nhiều năm trading, tôi nhận ra rằng <strong className="text-neutral-950 dark:text-neutral-50">kiến thức chỉ có giá trị khi được chia sẻ.</strong> Tôi đã từng là một người mới bắt đầu, đã từng mất tiền vì thiếu kiến thức, và đã từng cảm thấy lạc lõng trong hành trình này.
+              Tôi không muốn bạn lặp lại những sai lầm từng khiến tôi cháy tài khoản. Tài liệu, checklist, nhật ký tôi đăng miễn phí để bạn tham khảo và điều chỉnh cho phù hợp.
             </p>
             <p>
-              Website này được tạo ra với mục đích <strong className="text-neutral-950 dark:text-neutral-50">gieo duyên và chia sẻ</strong> - chia sẻ những gì tôi đã học được, những sai lầm tôi đã mắc phải, và những bài học quý giá mà tôi đã tích lũy qua hơn 7 năm trong thị trường.
+              Nếu bạn thấy hữu ích, hãy giữ liên lạc, đăng ký tài khoản qua link ref hoặc tham gia khóa học khi cảm thấy cần. Đó là cách tốt nhất để ủng hộ dự án này.
             </p>
-            <p>
-              Tôi không hứa hẹn bạn sẽ trở thành triệu phú sau khi đọc blog hay tham gia khóa học. Nhưng tôi cam kết sẽ chia sẻ với bạn những kiến thức thực tế, những chiến lược đã được kiểm chứng, và quan trọng nhất - <strong className="text-neutral-950 dark:text-neutral-50">cách tư duy đúng đắn về trading</strong>.
-            </p>
-            <p>
-              Nếu bạn cảm thấy những gì tôi chia sẻ có giá trị, tôi rất vui nếu bạn đăng ký tài khoản qua link của tôi hoặc tham gia các khóa học. Điều này giúp tôi duy trì website và tiếp tục tạo ra nội dung chất lượng cho cộng đồng.
-                            </p>
-                          </div>
+            <p>Tôi không hứa biến bạn thành triệu phú. Tôi chỉ chia sẻ những gì đang làm và cách tôi quản lý rủi ro mỗi ngày.</p>
+          </div>
           <div className="mt-10 flex flex-wrap gap-4">
             <Button href="/courses" className="w-full sm:w-auto">
               Xem khóa học
@@ -184,18 +177,14 @@ export default async function About() {
   return (
     <>
       <PageIntro eyebrow="Về tôi" title="Trader chuyên nghiệp với hơn 7 năm kinh nghiệm">
-        <p>
-          Tôi là một trader chuyên nghiệp với hơn 7 năm kinh nghiệm trong lĩnh vực giao dịch. 
-          Hành trình của tôi từ một người mới bắt đầu đến trader có thể kiếm sống từ nghề này 
-          đã cho tôi những bài học quý giá mà tôi muốn chia sẻ với bạn.
-        </p>
+        <p>Tôi là Gemi. Tôi giao dịch Forex và Crypto toàn thời gian, viết nhật ký mỗi tuần và chia sẻ lại mọi thứ tôi học được.</p>
       </PageIntro>
 
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="7+" label="Năm kinh nghiệm trading" />
-          <StatListItem value="1000+" label="Lệnh đã thực hiện" />
-          <StatListItem value="500+" label="Trader đã hướng dẫn" />
+          <StatListItem value="7" label="Năm bám trụ thị trường" />
+          <StatListItem value="2" label="Thị trường chính: Forex & Crypto" />
+          <StatListItem value="1" label="Nhật ký giao dịch cập nhật mỗi tuần" />
         </StatList>
       </Container>
 
