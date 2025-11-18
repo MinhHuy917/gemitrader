@@ -7,9 +7,10 @@ export type SocialPost = {
   fullContent: string
   shares: number
   slug: string
+  views: number
 }
 
-const rawSocialPosts: Array<Omit<SocialPost, 'slug'>> = [
+const rawSocialPosts: Array<Omit<SocialPost, 'slug' | 'views'>> = [
   {
     id: 1,
     author: "Jesse Gemi",
@@ -2055,7 +2056,7 @@ const normalizeForSlug = (value: string) =>
     .replace(/\s+/g, '-')
     .toLowerCase();
 
-const buildSlug = (post: Omit<SocialPost, 'slug'>, index: number) => {
+const buildSlug = (post: Omit<SocialPost, 'slug' | 'views'>, index: number) => {
   const source = post.content?.trim().length
     ? post.content
     : post.fullContent.split('\n').find((line) => line.trim().length > 0) ?? `post-${post.id}`;
@@ -2064,9 +2065,12 @@ const buildSlug = (post: Omit<SocialPost, 'slug'>, index: number) => {
   return normalized ? `${normalized}-${post.id}-${index}` : `post-${post.id}-${index}`;
 };
 
+const randomViews = () => Math.floor(Math.random() * 801) + 200;
+
 export const socialPosts: SocialPost[] = rawSocialPosts.map((post, index) => ({
   ...post,
   slug: buildSlug(post, index),
+  views: randomViews(),
 }));
 
 export const findSocialPostBySlug = (slug: string) =>
