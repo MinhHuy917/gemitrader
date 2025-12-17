@@ -1,10 +1,9 @@
 import { type Metadata } from 'next'
-import Link from 'next/link'
 
-import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
+import { CourseFeedback } from '@/components/CourseFeedback'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 
@@ -14,185 +13,200 @@ export const metadata: Metadata = {
     'Các khoá học trading từ cơ bản đến nâng cao, được thiết kế bởi các chuyên gia có nhiều năm kinh nghiệm.',
 }
 
-const courses = [
+const plans = [
   {
-    id: 1,
-    title: 'Trading cho người mới bắt đầu',
+    id: 'essential',
+    title: 'Essential',
+    price: '2.5 triệu',
+    period: '',
+    billing: 'Thanh toán một lần',
+    saving: '',
     level: 'Cơ bản',
-    duration: '8 tuần',
-    price: '2,500,000 VNĐ',
-    instructor: 'Gemi Trader',
-    description:
-      'Khoá học toàn diện dành cho người mới bắt đầu, bao gồm các khái niệm cơ bản về thị trường tài chính, cách đọc biểu đồ và thực hành giao dịch.',
-    topics: [
-      'Giới thiệu về thị trường tài chính',
-      'Cách đọc biểu đồ giá',
-      'Các chỉ báo kỹ thuật cơ bản',
-      'Quản lý rủi ro',
-      'Thực hành trên tài khoản demo',
+    features: [
+      'Lộ trình nhập môn trading 8 tuần',
+      'Hiểu cấu trúc thị trường & đọc biểu đồ',
+      'Thực hành demo với bộ template có sẵn',
+      'Quy tắc quản lý rủi ro 1-2%',
+      'Cộng đồng hỗ trợ cơ bản',
     ],
+    href: '/courses/checkout?plan=essential',
   },
   {
-    id: 2,
-    title: 'Phân tích kỹ thuật nâng cao',
-    level: 'Nâng cao',
-    duration: '10 tuần',
-    price: '4,500,000 VNĐ',
-    instructor: 'Gemi Trader',
-    description:
-      'Khoá học chuyên sâu về phân tích kỹ thuật, bao gồm các mẫu biểu đồ phức tạp, chiến lược giao dịch và cách tối ưu hóa điểm vào/ra lệnh.',
-    topics: [
-      'Mẫu biểu đồ nâng cao',
-      'Fibonacci và sóng Elliott',
-      'Chiến lược giao dịch đa khung thời gian',
-      'Tối ưu hóa điểm vào/ra',
-      'Backtesting và forward testing',
-    ],
-  },
-  {
-    id: 3,
-    title: 'Tâm lý học trong Trading',
+    id: 'plus',
+    title: 'Plus',
+    price: '4.5 triệu',
+    period: '',
+    billing: 'Thanh toán một lần',
+    saving: '',
     level: 'Trung cấp',
-    duration: '6 tuần',
-    price: '3,000,000 VNĐ',
-    instructor: 'Gemi Trader',
-    description:
-      'Hiểu rõ về tâm lý học trading, cách kiểm soát cảm xúc, xây dựng kỷ luật và phát triển mindset của một trader chuyên nghiệp.',
-    topics: [
-      'Tâm lý thị trường',
-      'Kiểm soát cảm xúc',
-      'Xây dựng kỷ luật trading',
-      'Quản lý stress',
-      'Phát triển hệ thống giao dịch cá nhân',
+    features: [
+      'Phân tích kỹ thuật nâng cao 10 tuần',
+      'Mẫu biểu đồ, Fibonacci, Elliott',
+      'Chiến lược đa khung thời gian',
+      'Backtest & checklist vào/ra lệnh',
+      'Coaching nhóm 2 buổi/tháng',
     ],
+    href: '/courses/checkout?plan=plus',
+    highlight: true,
   },
   {
-    id: 4,
-    title: 'Giao dịch Crypto chuyên nghiệp',
-    level: 'Trung cấp',
-    duration: '8 tuần',
-    price: '3,500,000 VNĐ',
-    instructor: 'Gemi Trader',
-    description:
-      'Khoá học chuyên về giao dịch cryptocurrency, bao gồm cách phân tích thị trường crypto, các chiến lược đặc thù và quản lý rủi ro.',
-    topics: [
-      'Đặc điểm thị trường crypto',
-      'Phân tích on-chain metrics',
-      'Chiến lược giao dịch crypto',
-      'Quản lý rủi ro trong crypto',
-      'Staking và DeFi',
+    id: 'premium',
+    title: 'Premium',
+    price: '6 triệu',
+    period: '',
+    billing: 'Thanh toán một lần',
+    saving: '',
+    level: 'Chuyên sâu',
+    features: [
+      'Tâm lý giao dịch & kỷ luật hệ thống',
+      'Quản trị cảm xúc, hạn chế FOMO',
+      'Kế hoạch giao dịch cá nhân hoá',
+      'Phản hồi nhật ký giao dịch hằng tuần',
+      'Phòng thảo luận real-time',
     ],
+    href: '/courses/checkout?plan=premium',
   },
   {
-    id: 5,
-    title: 'Algorithmic Trading',
-    level: 'Nâng cao',
-    duration: '12 tuần',
-    price: '6,000,000 VNĐ',
-    instructor: 'Gemi Trader',
-    description:
-      'Học cách xây dựng và triển khai các chiến lược giao dịch tự động sử dụng Python và các công cụ trading hiện đại.',
-    topics: [
-      'Lập trình Python cho trading',
-      'Xây dựng trading bot',
-      'Backtesting với dữ liệu thực',
-      'Machine Learning trong trading',
-      'Triển khai và monitoring',
+    id: 'ultimate',
+    title: 'Ultimate',
+    price: '8.5 triệu',
+    period: '',
+    billing: 'Thanh toán một lần',
+    saving: '',
+    level: 'Master',
+    features: [
+      'Giao dịch Crypto chuyên sâu & on-chain',
+      'Algorithmic trading cơ bản với Python',
+      'Bộ chỉ báo & dashboard tuỳ chỉnh',
+      '1:1 review chiến lược mỗi tháng',
+      'Ưu tiên hỗ trợ & tài liệu cập nhật',
     ],
-  },
-  {
-    id: 6,
-    title: 'Quản lý danh mục đầu tư',
-    level: 'Trung cấp',
-    duration: '6 tuần',
-    price: '2,800,000 VNĐ',
-    instructor: 'Gemi Trader',
-    description:
-      'Học cách xây dựng và quản lý danh mục đầu tư đa dạng, phân bổ tài sản và tối ưu hóa lợi nhuận/rủi ro.',
-    topics: [
-      'Phân bổ tài sản',
-      'Đa dạng hóa danh mục',
-      'Quản lý rủi ro danh mục',
-      'Rebalancing',
-      'Đánh giá hiệu suất',
-    ],
+    href: '/courses/checkout?plan=ultimate',
   },
 ]
 
-function CourseCard({
-  course,
+function PlanCard({
+  plan,
 }: {
-  course: (typeof courses)[number]
+  plan: (typeof plans)[number]
 }) {
   return (
-    <article className="relative flex w-full flex-col rounded-3xl bg-neutral-50 dark:bg-neutral-900 p-6 ring-1 ring-neutral-950/5 dark:ring-neutral-50/5 transition hover:bg-neutral-100 dark:hover:bg-neutral-800 sm:p-8">
-      <div className="flex items-start justify-between">
-        <div className="flex-1">
-          <div className="flex items-center gap-x-2">
-            <span className="rounded-full bg-neutral-200 dark:bg-neutral-800 px-2 py-0.5 text-xs font-medium text-neutral-700 dark:text-neutral-200">
-              {course.level}
-            </span>
-            <span className="rounded-full bg-neutral-200 dark:bg-neutral-800 px-2 py-0.5 text-xs font-medium text-neutral-700 dark:text-neutral-200">
-              {course.duration}
-            </span>
-          </div>
-          <h3 className="mt-4 font-display text-2xl font-semibold text-neutral-950 dark:text-neutral-50">
-            {course.title}
-          </h3>
-          <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-200">
-            Giảng viên: {course.instructor}
+    <div
+      className={[
+        'relative flex h-full flex-col overflow-hidden rounded-2xl border p-6 shadow-xl transition',
+        'bg-white/90 text-neutral-900 dark:border-neutral-800/80 dark:bg-neutral-950/90 dark:text-neutral-50',
+        'backdrop-blur-lg',
+        plan.highlight
+          ? 'border-amber-300/60 ring-2 ring-amber-300/40 dark:border-amber-400/60 dark:ring-amber-400/40'
+          : 'border-neutral-200/80 hover:border-neutral-300/80 dark:border-neutral-800/80 dark:hover:border-neutral-700',
+      ].join(' ')}
+    >
+      <div
+        className={[
+          'pointer-events-none absolute inset-0 opacity-80',
+          plan.highlight
+            ? 'bg-gradient-to-br from-amber-200/40 via-transparent to-blue-200/20 dark:from-amber-500/20 dark:via-transparent dark:to-blue-500/10'
+            : 'bg-gradient-to-b from-neutral-100/40 via-transparent to-neutral-200/30 dark:from-neutral-900/60 dark:via-transparent dark:to-neutral-900/20',
+        ].join(' ')}
+        aria-hidden
+      />
+      <div className="flex items-start justify-between gap-2">
+        <div className="space-y-1">
+          <p className="text-xs font-semibold uppercase tracking-wide text-amber-600 dark:text-amber-300">
+            {plan.level}
           </p>
-          <p className="mt-4 text-base text-neutral-600 dark:text-neutral-200">{course.description}</p>
+          <h3 className="font-display text-2xl font-semibold text-neutral-950 dark:text-white">
+            {plan.title}
+          </h3>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">
+            {plan.billing || 'Thanh toán một lần'}
+          </p>
+          {plan.saving && (
+            <p className="text-sm text-amber-500 dark:text-amber-300">{plan.saving}</p>
+          )}
+        </div>
+        <div
+          className={[
+            'rounded-full px-3 py-1 text-xs font-semibold shadow-sm',
+            plan.highlight
+              ? 'bg-amber-500/15 text-amber-700 dark:bg-amber-500/20 dark:text-amber-200'
+              : 'bg-neutral-200/60 text-neutral-700 dark:bg-neutral-800/60 dark:text-neutral-200',
+          ].join(' ')}
+        >
+          {plan.highlight ? 'Phổ biến' : 'Gợi ý'}
+        </div>
+      </div>
+
+      <div className="mt-6 flex items-baseline gap-2">
+        <span className="font-display text-3xl font-bold text-neutral-950 dark:text-white">
+          {plan.price}
+        </span>
+        {plan.period && (
+          <span className="text-sm text-neutral-500 dark:text-neutral-400">{plan.period}</span>
+        )}
+      </div>
+
           <div className="mt-6">
-            <p className="text-sm font-semibold text-neutral-950 dark:text-neutral-50">
-              Nội dung khoá học:
-            </p>
-            <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-200">
-              {course.topics.map((topic, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="mr-2 text-neutral-400 dark:text-neutral-400">•</span>
-                  {topic}
+        <Button
+          href={plan.href}
+          className={[
+            'w-full justify-center',
+            plan.highlight
+              ? 'bg-amber-400 text-neutral-950 hover:bg-amber-300'
+              : 'bg-neutral-900 text-white hover:bg-neutral-800 dark:bg-neutral-100 dark:text-neutral-950 dark:hover:bg-white',
+          ].join(' ')}
+          aria-label={`Đăng ký ${plan.title}`}
+        >
+          Bắt đầu ngay
+        </Button>
+      </div>
+
+      <div className="my-6 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent dark:via-neutral-800" />
+
+      <ul className="mt-4 space-y-3 text-sm text-neutral-700 dark:text-neutral-100">
+        {plan.features.map((feature) => (
+          <li key={feature} className="flex items-start gap-2">
+            <span className="mt-0.5 text-amber-500 dark:text-amber-300">✓</span>
+            <span className="leading-relaxed">{feature}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="mt-6 flex items-center justify-between">
-            <span className="font-display text-xl font-semibold text-neutral-950 dark:text-neutral-50">
-              {course.price}
-            </span>
-            <Button
-              href={`/courses/${course.id}`}
-              aria-label={`Đăng ký: ${course.title}`}
-            >
-              Đăng ký ngay
-            </Button>
-          </div>
-        </div>
-      </div>
-    </article>
   )
 }
 
 export default function Courses() {
   return (
     <>
-      <PageIntro eyebrow="Khoá Học" title="Nâng cao kỹ năng trading của bạn">
-        <p>
-          Tham gia các khoá học được thiết kế bởi các chuyên gia có nhiều năm
-          kinh nghiệm, từ cơ bản đến nâng cao, giúp bạn trở thành trader chuyên
-          nghiệp.
-        </p>
-      </PageIntro>
+      <section className="relative overflow-hidden rounded-3xl border border-neutral-200/40 bg-gradient-to-b from-white via-neutral-50 to-neutral-100 px-4 py-14 shadow-lg dark:border-neutral-900/60 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(236,179,101,0.12),transparent_32%),radial-gradient(circle_at_80%_0%,rgba(59,130,246,0.08),transparent_30%),radial-gradient(circle_at_50%_80%,rgba(236,72,153,0.08),transparent_32%)] opacity-90 dark:opacity-70" />
+        <Container className="relative">
+          <div className="flex flex-col items-center text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-amber-600 dark:text-amber-400">
+              Lộ trình linh hoạt
+            </p>
+            <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold leading-tight text-neutral-950 dark:text-white sm:text-5xl">
+              Gói khoá học cho mọi mục tiêu trading
+            </h1>
+            <p className="mt-4 max-w-2xl text-base text-neutral-600 dark:text-neutral-300">
+              Chọn khoá học phù hợp, thanh toán một lần và nhận trọn bộ nội dung, cập nhật mới, cộng
+              đồng hỗ trợ và mentor đồng hành lâu dài.
+            </p>
+          </div>
 
-      <Container className="mt-24 sm:mt-32 lg:mt-40">
-        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {courses.map((course) => (
-            <FadeIn key={course.id}>
-              <CourseCard course={course} />
+          <div className="mt-12">
+            <FadeInStagger className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+              {plans.map((plan) => (
+                <FadeIn key={plan.id}>
+                  <PlanCard plan={plan} />
             </FadeIn>
           ))}
         </FadeInStagger>
+          </div>
       </Container>
+      </section>
+
+      <CourseFeedback />
 
       <ContactSection />
     </>

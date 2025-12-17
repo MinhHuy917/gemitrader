@@ -60,13 +60,30 @@ function Header({
 }) {
   let { logoHovered, setLogoHovered } = useContext(RootLayoutContext)!
   let pathname = usePathname()
+  let [openDropdown, setOpenDropdown] = useState<string | null>(null)
 
   const navLinks = [
     { href: '/about', label: 'Về tôi' },
-    { href: '/quotes', label: 'Quotes' },
+    {
+      href: '/kien-thuc',
+      label: 'Kiến thức',
+      children: [
+        { href: '/kien-thuc#co-ban', label: 'Kiến thức cơ bản' },
+        { href: '/quotes', label: 'Quotes' },
+        { href: '/trading-shorts', label: 'Trading Shorts' },
+        { href: '/library', label: 'Thư viện' },
+      ],
+    },
     { href: '/blog', label: 'Blog' },
-    { href: '/library', label: 'Thư viện' },
-    { href: '/courses', label: 'Khoá Học' },
+    { href: '/courses', label: 'Khoá học' },
+    {
+      href: '/san-giao-dich',
+      label: 'Sàn giao dịch',
+      children: [
+        { href: '/san-giao-dich-forex', label: 'Sàn Forex' },
+        { href: '/san-giao-dich-crypto', label: 'Sàn Crypto' },
+      ],
+    },
   ]
 
   return (
@@ -96,36 +113,93 @@ function Header({
         <nav className="hidden lg:flex items-center gap-x-2">
           {navLinks.map((link) => {
             const isActive = pathname === link.href
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={clsx(
-                  'relative px-5 py-2.5 text-sm font-semibold rounded-xl transition-all duration-300',
-                  'group overflow-hidden',
-                  isActive
-                    ? invert
-                      ? 'bg-white/20 text-white shadow-lg shadow-white/10'
-                      : 'bg-gradient-to-r from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 text-white dark:text-neutral-950 shadow-lg shadow-neutral-950/20 dark:shadow-neutral-50/20'
-                    : invert
-                      ? 'text-white/90 hover:text-white hover:bg-white/10'
-                      : 'text-neutral-700 dark:text-white hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800/50',
-                )}
-              >
-                <span className="relative z-10">{link.label}</span>
-                {isActive && (
-                  <motion.span
-                    layoutId="activeNav"
-                    className="absolute inset-0 bg-gradient-to-r from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 rounded-xl -z-0"
-                    transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-                  />
-                )}
-                {!isActive && !invert && (
-                  <>
+            const hasChildren = 'children' in link && Array.isArray(link.children)
+
+            if (!hasChildren) {
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={clsx(
+                    'relative px-5 py-2.5 text-sm font-semibold rounded-xl transition-all duration-300',
+                    'group overflow-hidden',
+                    isActive
+                      ? invert
+                        ? 'bg-white/20 text-white shadow-lg shadow-white/10'
+                        : 'bg-gradient-to-r from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 text-white dark:text-neutral-950 shadow-lg shadow-neutral-950/20 dark:shadow-neutral-50/20'
+                      : invert
+                        ? 'text-white/90 hover:text-white hover:bg-white/10'
+                        : 'text-neutral-700 dark:text-white hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800/50',
+                  )}
+                >
+                  <span className="relative z-10">{link.label}</span>
+                  {isActive && (
+                    <motion.span
+                      layoutId="activeNav"
+                      className="absolute inset-0 bg-gradient-to-r from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 rounded-xl -z-0"
+                      transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
+                    />
+                  )}
+                  {!isActive && !invert && (
                     <span className="absolute inset-0 bg-gradient-to-r from-neutral-100 to-neutral-50 dark:from-neutral-800 dark:to-neutral-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-0" />
-                  </>
+                  )}
+                </Link>
+              )
+            }
+
+            return (
+              <div
+                key={link.href}
+                className="relative"
+                onMouseEnter={() => setOpenDropdown(link.href)}
+                onMouseLeave={() => setOpenDropdown((current) => (current === link.href ? null : current))}
+              >
+                <Link
+                  href={link.href}
+                  className={clsx(
+                    'relative px-5 py-2.5 text-sm font-semibold rounded-xl transition-all duration-300 ',
+                    'group overflow-hidden flex items-center gap-1',
+                    isActive
+                      ? invert
+                        ? 'bg-white/20 text-white shadow-lg shadow-white/10'
+                        : 'bg-gradient-to-r from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 text-white dark:text-neutral-950 shadow-lg shadow-neutral-950/20 dark:shadow-neutral-50/20'
+                      : invert
+                        ? 'text-white/90 hover:text-white hover:bg-white/10'
+                        : 'text-neutral-700 dark:text-white hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800/50',
+                  )}
+                >
+                  <span className="relative z-10">{link.label}</span>
+                  <span className="relative z-10 text-xs opacity-70">▾</span>
+                  {isActive && (
+                    <motion.span
+                      layoutId="activeNav"
+                      className="absolute inset-0 bg-gradient-to-r from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 rounded-xl -z-0"
+                      transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
+                    />
+                  )}
+                  {!isActive && !invert && (
+                    <span className="absolute inset-0 bg-gradient-to-r from-neutral-100 to-neutral-50 dark:from-neutral-800 dark:to-neutral-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-0" />
+                  )}
+                </Link>
+
+                {openDropdown === link.href && (
+                  <div className="absolute left-0 top-full mt-0.5 w-56 rounded-2xl border border-neutral-200 bg-white/95 p-2 text-sm shadow-xl backdrop-blur dark:border-neutral-700 dark:bg-neutral-900/95">
+                    {(link as { children: { href: string; label: string }[] }).children.map((child) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        className={clsx(
+                          'flex items-center justify-between rounded-xl px-3 py-2 text-sm font-medium transition-colors',
+                          'text-neutral-700 hover:bg-neutral-100 hover:text-neutral-950 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:hover:text-white',
+                        )}
+                      >
+                        <span>{child.label}</span>
+                        <span className="text-xs text-neutral-400 dark:text-neutral-500">↗</span>
+                      </Link>
+                    ))}
+                  </div>
                 )}
-              </Link>
+              </div>
             )
           })}
         </nav>
@@ -206,50 +280,129 @@ function NavigationItem({
   )
 }
 
-function Navigation({ 
-  pathname, 
-  onLinkClick 
-}: { 
+function Navigation({
+  pathname,
+  onLinkClick,
+}: {
   pathname: string
-  onLinkClick?: () => void 
+  onLinkClick?: () => void
 }) {
+  const [openSection, setOpenSection] = useState<string | null>(null)
+
   const navLinks = [
     { href: '/about', label: 'Về tôi' },
-    { href: '/quotes', label: 'Quotes' },
+    {
+      href: '/kien-thuc',
+      label: 'Kiến thức',
+      children: [
+        { href: '/kien-thuc#co-ban', label: 'Kiến thức cơ bản' },
+        { href: '/quotes', label: 'Quotes' },
+        { href: '/trading-shorts', label: 'Trading Shorts' },
+        { href: '/library', label: 'Thư viện' },
+      ],
+    },
     { href: '/blog', label: 'Blog' },
-    { href: '/library', label: 'Thư viện' },
-    { href: '/courses', label: 'Khoá Học' },
+    { href: '/courses', label: 'Khoá học' },
+    {
+      href: '/san-giao-dich',
+      label: 'Sàn giao dịch',
+      children: [
+        { href: '/san-giao-dich-forex', label: 'Sàn Forex' },
+        { href: '/san-giao-dich-crypto', label: 'Sàn Crypto' },
+      ],
+    },
+    { href: '/connect', label: 'Kết nối' },
   ]
 
   return (
     <nav className="px-6 py-4 space-y-2">
       {navLinks.map((link) => {
         const isActive = pathname === link.href
+        const hasChildren = 'children' in link && Array.isArray(link.children)
+
+        if (!hasChildren) {
+          return (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={clsx(
+                'relative block px-5 py-4 text-lg font-semibold rounded-xl transition-all duration-300',
+                'group overflow-hidden',
+                isActive
+                  ? 'bg-gradient-to-r from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 text-white dark:text-neutral-950 shadow-lg shadow-neutral-950/20 dark:shadow-neutral-50/20'
+                  : 'text-neutral-700 dark:text-white hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800',
+              )}
+              onClick={onLinkClick}
+            >
+              <span className="relative z-10">{link.label}</span>
+              {isActive && (
+                <motion.span
+                  layoutId="activeNavMobile"
+                  className="absolute inset-0 bg-gradient-to-r from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 rounded-xl -z-0"
+                  transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
+                />
+              )}
+              {!isActive && (
+                <span className="absolute inset-0 bg-gradient-to-r from-neutral-100 to-neutral-50 dark:from-neutral-800 dark:to-neutral-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-0" />
+              )}
+            </Link>
+          )
+        }
+
+        const isOpen = openSection === link.href
+
         return (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={clsx(
-              'relative block px-5 py-4 text-lg font-semibold rounded-xl transition-all duration-300',
-              'group overflow-hidden',
-              isActive
-                ? 'bg-gradient-to-r from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 text-white dark:text-neutral-950 shadow-lg shadow-neutral-950/20 dark:shadow-neutral-50/20'
-                : 'text-neutral-700 dark:text-white hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800',
+          <div key={link.href} className="space-y-1">
+            <button
+              type="button"
+              onClick={() => setOpenSection(isOpen ? null : link.href)}
+              className={clsx(
+                'w-full relative flex items-center justify-between px-5 py-4 text-lg font-semibold rounded-xl text-left transition-all duration-300',
+                'group overflow-hidden',
+                isActive
+                  ? 'bg-gradient-to-r from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 text-white dark:text-neutral-950 shadow-lg shadow-neutral-950/20 dark:shadow-neutral-50/20'
+                  : 'text-neutral-700 dark:text-white hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800',
+              )}
+            >
+              <span className="relative z-10">{link.label}</span>
+              <span
+                className={clsx(
+                  'relative z-10 text-xs transition-transform duration-200',
+                  isOpen ? 'rotate-180' : '',
+                )}
+              >
+                ▾
+              </span>
+            </button>
+
+            {isOpen && (
+              <div className="ml-8 space-y-1">
+                {(link as { children: { href: string; label: string }[] }).children.map(
+                  (child) => {
+                    const childActive = pathname === child.href
+                    return (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        onClick={onLinkClick}
+                        className={clsx(
+                          'flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-colors',
+                          childActive
+                            ? 'text-neutral-950 dark:text-white'
+                            : 'text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:text-white dark:hover:bg-neutral-800',
+                        )}
+                      >
+                        <span>{child.label}</span>
+                        <span className="text-[11px] text-neutral-400 dark:text-neutral-500">
+                          →
+                        </span>
+                      </Link>
+                    )
+                  },
+                )}
+              </div>
             )}
-            onClick={onLinkClick}
-          >
-            <span className="relative z-10">{link.label}</span>
-            {isActive && (
-              <motion.span
-                layoutId="activeNavMobile"
-                className="absolute inset-0 bg-gradient-to-r from-neutral-950 to-neutral-800 dark:from-neutral-50 dark:to-neutral-100 rounded-xl -z-0"
-                transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-              />
-            )}
-            {!isActive && (
-              <span className="absolute inset-0 bg-gradient-to-r from-neutral-100 to-neutral-50 dark:from-neutral-800 dark:to-neutral-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-0" />
-            )}
-          </Link>
+          </div>
         )
       })}
     </nav>
