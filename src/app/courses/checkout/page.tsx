@@ -1,12 +1,15 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { Suspense, useEffect, useMemo, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
+
+// Trang này phụ thuộc vào searchParams (plan) nên không prerender tĩnh
+export const dynamic = 'force-dynamic'
 
 type PlanInfo = {
   id: string
@@ -23,7 +26,7 @@ const plans: PlanInfo[] = [
 
 type Step = 'form' | 'qr' | 'verifying' | 'success'
 
-export default function CheckoutPage() {
+function CheckoutContent() {
   const searchParams = useSearchParams()
   const defaultPlan = searchParams.get('plan') || 'plus'
 
@@ -244,4 +247,19 @@ export default function CheckoutPage() {
   )
 }
 
+export default function CheckoutPage() {
+  return (
+    <Suspense
+      fallback={
+        <Container className="mt-10 pb-16">
+          <div className="flex h-64 items-center justify-center text-sm text-neutral-500 dark:text-neutral-300">
+            Đang tải trang thanh toán...
+          </div>
+        </Container>
+      }
+    >
+      <CheckoutContent />
+    </Suspense>
+  )
+}
 
