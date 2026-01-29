@@ -1227,7 +1227,7 @@ Nếu anh em không thực sự đam mê, không yêu thích việc khám phá t
     content: "",
     fullContent: `Hãy cứ chịu khó gieo hạt, trồng cây, tưới tắm,...đồng thời vun bồi học hỏi kỹ thuật gieo trồng để làm sao cây ít chết, phát triển nhanh & cho năng suất cao. Đến một ngày nào đó khi bạn già & mệt ngồi dưới một gốc cây, đó rất có thể là cây mà chính bạn trước kia đã gieo trồng & chăm sóc. Bạn xứng đáng được hưởng trái ngọt & bóng mát.
 
-Trong 5-7 năm đầu tiên của sự nghiệp bạn nên tập trung gieo trồng. Tuổi trẻ bây giờ có nhiều bạn trồng thì không muốn trồng chỉ đòi hái quả. Bạn thử nghĩ xem, bạn muốn hái quả mà không chịu trồng cây, đầu tư thời gian & công sức chăm bón thì có phải bạn phải đi ăn cắp không. Mà có ăn cắp thì bạn cũng thấp thỏm không yên, có nhiều tiền cũng không vẻ vang gì.
+Trong 5-8 năm đầu tiên của sự nghiệp bạn nên tập trung gieo trồng. Tuổi trẻ bây giờ có nhiều bạn trồng thì không muốn trồng chỉ đòi hái quả. Bạn thử nghĩ xem, bạn muốn hái quả mà không chịu trồng cây, đầu tư thời gian & công sức chăm bón thì có phải bạn phải đi ăn cắp không. Mà có ăn cắp thì bạn cũng thấp thỏm không yên, có nhiều tiền cũng không vẻ vang gì.
 
 Nên làm gì cũng thuận theo tự nhiên, đừng khôn lỏi đi tắt đón đầu, đôi khi cái giá bạn phải trả sẽ đắt vô cùng. Cái gì thì cái năng lực của mình đến đâu mình hưởng đến đó là viên mãn nhất. Không có tiền đã khổ đã nhục, nhưng có nhiều tiền mà không có kiến thức thì còn nhục hơn.`,
     shares: 28,

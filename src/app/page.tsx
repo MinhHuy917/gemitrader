@@ -73,10 +73,10 @@ function AboutPreview() {
             <div className="flex flex-col gap-4">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary dark:text-primary-400">Về tôi</p>
               <h2 className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">
-                Trader chuyên nghiệp với hơn 7 năm kinh nghiệm
+                Trader chuyên nghiệp với hơn 8 năm kinh nghiệm
               </h2>
               <p className="max-w-3xl text-base text-neutral-600 dark:text-neutral-300">
-                Tôi là một trader chuyên nghiệp với hơn 7 năm kinh nghiệm trong lĩnh vực giao dịch. 
+                Tôi là một trader chuyên nghiệp với hơn 8 năm kinh nghiệm trong lĩnh vực giao dịch. 
                 Hành trình của tôi từ một người mới bắt đầu đến trader có thể kiếm sống từ nghề này 
                 đã cho tôi những bài học quý giá mà tôi muốn chia sẻ với bạn.
               </p>
@@ -99,7 +99,7 @@ function AboutPreview() {
               <p>
                 Sau nhiều năm trading, tôi nhận ra rằng <strong className="text-neutral-950 dark:text-neutral-50">kiến thức chỉ có giá trị khi được chia sẻ.</strong> 
                 Website này được tạo ra với mục đích gieo duyên và chia sẻ - chia sẻ những gì tôi đã học được, 
-                những sai lầm tôi đã mắc phải, và những bài học quý giá mà tôi đã tích lũy qua hơn 7 năm trong thị trường.
+                những sai lầm tôi đã mắc phải, và những bài học quý giá mà tôi đã tích lũy qua hơn 8 năm trong thị trường.
               </p>
               <p>
                 Tôi không hứa hẹn bạn sẽ trở thành triệu phú sau khi đọc blog hay tham gia khóa học. 

@@ -22,7 +22,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: {
     template: '%s | Gemi Trader',
-    default: 'Gemi Trader - Trader chuyên nghiệp với hơn 7 năm kinh nghiệm',
+    default: 'Gemi Trader - Trader chuyên nghiệp với hơn 8 năm kinh nghiệm',
   },
   description:
     'Gemi Trader - Chia sẻ chiến lược trading, nhật ký giao dịch, phân tích thị trường và thư viện tài liệu miễn phí.',

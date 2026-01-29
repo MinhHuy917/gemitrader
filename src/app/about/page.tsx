@@ -168,7 +168,7 @@ function Purpose() {
 export const metadata: Metadata = {
   title: 'Về tôi - Gemi Trader',
   description:
-    'Tôi là một trader chuyên nghiệp với hơn 7 năm kinh nghiệm trong lĩnh vực giao dịch. Chia sẻ câu chuyện, kinh nghiệm và mục đích tạo ra website này.',
+    'Tôi là một trader chuyên nghiệp với hơn 8 năm kinh nghiệm trong lĩnh vực giao dịch. Chia sẻ câu chuyện, kinh nghiệm và mục đích tạo ra website này.',
 }
 
 export default async function About() {
@@ -176,7 +176,7 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="Về tôi" title="Trader chuyên nghiệp với hơn 7 năm kinh nghiệm">
+      <PageIntro eyebrow="Về tôi" title="Trader chuyên nghiệp với hơn 8 năm kinh nghiệm">
         <p>Tôi là Gemi. Tôi giao dịch Forex và Crypto toàn thời gian, viết nhật ký mỗi tuần và chia sẻ lại mọi thứ tôi học được.</p>
       </PageIntro>
 
@@ -199,7 +199,7 @@ export default async function About() {
       <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
         title="Bài viết mới nhất"
-        intro="Những bài viết về trading, phân tích thị trường và chia sẻ kinh nghiệm từ hành trình 7 năm của tôi."
+        intro="Những bài viết về trading, phân tích thị trường và chia sẻ kinh nghiệm từ hành trình 8 năm của tôi."
         pages={blogArticles}
       />
 
