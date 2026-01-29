@@ -1,4 +1,5 @@
 import { type Metadata } from 'next'
+import Script from 'next/script'
 import { Inter, Space_Grotesk } from 'next/font/google'
 
 import { RootLayout } from '@/components/RootLayout'
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     default: 'Gemi Trader - Trader chuyên nghiệp với hơn 7 năm kinh nghiệm',
   },
   description:
-    'Gemi Trader - Chia sẻ chiến lược trading, nhật ký giao dịch, phân tích thị trường và thư viện tài liệu miễn phí. Trader chuyên nghiệp với hơn 7 năm kinh nghiệm.',
+    'Gemi Trader - Chia sẻ chiến lược trading, nhật ký giao dịch, phân tích thị trường và thư viện tài liệu miễn phí.',
   keywords: [
     'trading',
     'forex',
@@ -32,36 +33,18 @@ export const metadata: Metadata = {
     'giao dịch',
     'phân tích kỹ thuật',
     'Gemi Trader',
-    'trading strategy',
-    'quản lý rủi ro',
   ],
-  authors: [{ name: 'Gemi Trader' }],
-  creator: 'Gemi Trader',
   openGraph: {
     type: 'website',
     locale: 'vi_VN',
     url: 'https://gemitrader.com',
     siteName: 'Gemi Trader',
-    title: 'Gemi Trader - Trader chuyên nghiệp với hơn 7 năm kinh nghiệm',
+    title: 'Gemi Trader - Trader chuyên nghiệp',
     description:
-      'Chia sẻ chiến lược trading, nhật ký giao dịch, phân tích thị trường và thư viện tài liệu miễn phí.',
+      'Chia sẻ chiến lược trading, nhật ký giao dịch, phân tích thị trường.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gemi Trader - Trader chuyên nghiệp',
-    description:
-      'Chia sẻ chiến lược trading, nhật ký giao dịch, phân tích thị trường và thư viện tài liệu miễn phí.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
 }
 
@@ -70,6 +53,23 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang="vi" className="h-full" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2982G26PTB"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2982G26PTB');
+          `}
+        </Script>
+
+        {/* Init theme before hydration */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -87,8 +87,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           }}
         />
       </head>
+
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} flex min-h-full flex-col bg-white text-neutral-950 antialiased transition-colors duration-300 dark:bg-neutral-950 dark:text-neutral-50`}
+        className={`${inter.variable} ${spaceGrotesk.variable} flex min-h-full flex-col bg-white text-neutral-950 antialiased dark:bg-neutral-950 dark:text-neutral-50`}
       >
         <ThemeProvider>
           <RootLayout>{children}</RootLayout>
