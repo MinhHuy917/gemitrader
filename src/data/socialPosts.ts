@@ -13,7 +13,7 @@ export type SocialPost = {
 const rawSocialPosts: Array<Omit<SocialPost, 'slug' | 'views'>> = [
   {
     id: 1,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "2 giờ trước",
     content: "Trong thế giới tài chính, có một khái niệm đã ăn sâu vào tư duy của hầu hết nhà đầu tư – ngưỡng cản. Đây là những điểm mà giá...",
     fullContent: `Trong thế giới tài chính, có một khái niệm đã ăn sâu vào tư duy của hầu hết nhà đầu tư – ngưỡng cản. Đây là những điểm mà giá thường gặp khó khăn khi tiếp tục tăng hoặc giảm, được phân thành các loại như: cản tĩnh, cản động, và cản tại các mốc số tròn. Những mức giá này không chỉ là con số trên biểu đồ, mà còn là các cột mốc tâm lý ảnh hưởng trực tiếp đến hành vi và quyết định của trader.\n
@@ -31,7 +31,7 @@ Nên nhớ: Cản sinh ra để được phá. Và cũng giống như thị trư
   },
   {
     id: 2,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "4 giờ trước",
     content: "LƯỠI DAO CỦA NGƯỜI ESKIMO. Những người Eskimo lấy các lưỡi dao thật bén đem nhúng vào máu động vật...",
     fullContent: `LƯỠI DAO CỦA NGƯỜI ESKIMO.
@@ -52,7 +52,7 @@ Nếu bạn còn trẻ, nhưng chỉ thích nhàn hạ và sung sướng, suốt
   },
   {
     id: 3,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "6 giờ trước",
     content: "Trên một ngọn núi cao có một ngôi chùa cổ, nơi lão hòa thượng và tiểu hòa thượng cùng nhau sống. Một hôm, chùa hết dầu...",
     fullContent: `Trên một ngọn núi cao có một ngôi chùa cổ, nơi lão hòa thượng và tiểu hòa thượng cùng nhau sống. Một hôm, chùa hết dầu thắp đèn, lão hòa thượng gọi tiểu hòa thượng lại và dặn: "Con hãy cầm bát xuống núi mua dầu."
@@ -76,7 +76,7 @@ Vậy, hãy cứ thuận theo tự nhiên, ngộ tới đâu, làm tới đó. �
   },
   {
     id: 4,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "8 giờ trước",
     content: "CÁC GIAI ĐOẠN PHÁT TRIỂN TÂM LÝ GIAO DỊCH. Yếu tố tâm lý là một nguyên nhân quan trọng trong sự thành công...",
     fullContent: `CÁC GIAI ĐOẠN PHÁT TRIỂN TÂM LÝ GIAO DỊCH
@@ -131,7 +131,7 @@ Và vào cuối ngày, bạn xem xét công việc của mình, thực hiện m�
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "Bài toán tâm lý muôn thuở của Trader: “Lỗ thì gồng, lãi chốt non. Đa số các Trader luôn có suy nghĩ “chốt lời sớm khi lệnh có lãi” và...",
     fullContent: `Bài toán tâm lý muôn thuở của Trader: “Lỗ thì gồng, lãi chốt non”
@@ -155,7 +155,7 @@ Bạn sẽ nhận ra rằng việc gồng lời đôi khi còn khó hơn cắt l
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "TIMING TRONG TRADING. Thị trường thường dành 80% thời gian ở trạng thái choppy (không có xu hướng rõ ràng), khiến việc giao dịch trở nên... ",
     fullContent: `TIMING TRONG TRADING
@@ -182,7 +182,7 @@ Và lệnh của chúng ta SẼ TĂNG XÁC XUẤT CAO, TRÙNG VỚI TIMING GIÁ 
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `MA LỰC CỦA THỊ TRƯỜNG TÀI CHÍNH
@@ -208,7 +208,7 @@ Ps/: Hiểu biết là cách duy nhất để giải quyết nỗi sợ hãi`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Vì Sao Bạn Chưa Thoát Ra Khỏi Giai Đoạn Thua Lỗ?
@@ -237,7 +237,7 @@ Chấp Nhận Và Sửa Sai: Xoá tan nỗi sợ hãi bằng cách chấp nhận
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Điều đầu tiên, sau khi xác định một giao dịch PHẢI LUÔN LÀ - RỦI RO CỦA TÔI LÀ GÌ? Điều DUY NHẤT mà các trader chuyên nghiệp quan tâm là họ có thể MẤT bao nhiêu tiền. Những người nghiệp dư và tất cả các nhà giao dịch khác đều nghĩ ngược lại - họ có thể kiếm được bao nhiêu.
@@ -255,7 +255,7 @@ Tôi hứa với bạn chắc chắn 100% rằng nếu bạn làm điều này, 
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Những Triết Lý Vàng Của Warren Buffett: Bài Học Đắt Giá Về Đầu Tư và Cuộc Sống
@@ -278,7 +278,7 @@ Tôi hứa với bạn chắc chắn 100% rằng nếu bạn làm điều này, 
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Sự Tham Lam, Nỗi Sợ Hãi, và Hy Vọng Trong Thị Trường Tài Chính
@@ -299,7 +299,7 @@ Trong thị trường tài chính, để thành công, chúng ta cần phải đ
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "Bài học xương máu trong đầu tư",
     fullContent: `Bài học xương máu trong đầu tư
@@ -332,7 +332,7 @@ Trong thị trường tài chính, để thành công, chúng ta cần phải đ
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Chinh Phục Nỗi Sợ Mất Tiền
@@ -342,7 +342,7 @@ Trong thị trường tài chính, để thành công, chúng ta cần phải đ
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `5 kinh nghiệm “xương máu” từ Livermore
@@ -367,7 +367,7 @@ Câu mở đầu quyển sách của Livermore đã trở nên kinh điển tron
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Nhà toán học vĩ đại gần đây Benoit Mandelbrot được chính phủ Ai Cập thuê để tạo một mô hình toán học cho giá cotton – nguồn xuất khẩu nông nghiệp chính của nước đó. Sau khi nghiên cứu mở rộng, nhà khóa học tìm ra điều này: “Giá dao động trên và dưới giá trị”. Nó nghe có vẻ đơn giản, nhưng thực tế nó sâu sắc. Nếu chúng ta chấp nhận kết luận toán học này và nếu chúng ta có các định nghĩa về giá trị xác định và đo một khoảng dao động trung bình, chúng ta sẽ có một hệ thống giao dịch. Chúng ta sẽ cần mua dưới giá trị và chốt lời tại giá trị hoặc bán trên giá trị và thu lời tại đó.
@@ -376,7 +376,7 @@ Chúng ta đã đồng ý rằng giá trị đó là vùng nằm giư�
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Thời gian rồi thấy nhiều người than thở khóc lóc trên thị trường tài chính quá, Mình mới nhớ tới câu chuyện của Tư Mã Ý...Trong thời Tam quốc có rất nhiều anh tài, mạnh từ tướng cho tới quốc lực ví dụ như so về mưu lược thì Tư Mã Ý không thể sánh bằng Khổng Minh, nếu so về quốc lực thì Tư Mã Ý phải theo thờ Tào Tháo vậy nhưng mà cuối cùng người thắng hết toàn bộ thiên hạ lại là Tư Mã Ý, mọi người có biết tại sao không ? Đơn giản lắm vì ông ta sống lâu nhất, nhẫn nhịn kiên nhẫn tốt nhất ...
@@ -397,7 +397,7 @@ Sau khi thất bại trước trận đánh với Khổng Minh, hai người con
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Wall Street được đặt tên sau một bức tường giữ các động vật nuôi khỏi lang thang từ nơi chăn nuôi tới mũi phía Nam của Manhattan. Các di sản nông nghiệp sống mãi trong ngôn ngữ của các trader. Bốn động vật đặc biệt được nhắc đến ở Phố Wall là: bò và gấu, lợn và cừu. Các trader nói rằng: “Bò kiếm tiền, gấu kiếm tiền, nhưng heo bị giết.”
@@ -407,7 +407,7 @@ Bất cứ khi nào thị trường mở cửa, bò thì mua, gấu thì 
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Chắc chắn, có rất nhiều con cừu đang đợi bị lừa hoặc bị giết. Con cừu thì dễ giết – nhưng nếu bạn muốn có một miếng thịt của nó, bạn phải chiến đấu với những đối thủ cạnh tranh rất nguy hiểm. Đó là những chuyên gia thủ đoạn: xạ thủ Mỹ, hiệp sĩ Anh, lính đánh thuê Đức, samurai Nhật Bản, và các chiến binh khác, tất cả đi sau các con cừu không may tương tự. Giao dịch nghĩa là chiến đấu với đám đông thù địch, trong khi phải trả tiền cho đặc quyền để vào cuộc chiến và rời đi, dù là sống, hay chết hoặc bị thương.`,
@@ -415,7 +415,7 @@ Bất cứ khi nào thị trường mở cửa, bò thì mua, gấu thì 
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Các đám đông lớn giao dịch cổ phiếu, hàng hóa, và trao đổi quyền chọn. Tiền lớn và tiền nhỏ, tiền thông minh và tiền ngu ngốc, tiền công ty hay tiền cá nhân, các nhà đầu tư dài hạn và các trader ngắn hạn, tất cả gặp nhau tại sàn. Mỗi giá thể hiện một sự đồng thuận tạm thời về giá trị giữa người mua, người bán, và các trader chưa quyết định tại thời điểm giao dịch. Có một đám đông đằng sau mỗi mô hình trên màn hình.
@@ -427,17 +427,17 @@ Giá và khối lượng giao dịch, cùng với các indicator theo dõi c
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
-    fullContent: `Trader - Jesse Gemi, [08/11/2024 08:28]
+    fullContent: `Trader - Gemi, [08/11/2024 08:28]
 Các đám đông lớn giao dịch cổ phiếu, hàng hóa, và trao đổi quyền chọn. Tiền lớn và tiền nhỏ, tiền thông minh và tiền ngu ngốc, tiền công ty hay tiền cá nhân, các nhà đầu tư dài hạn và các trader ngắn hạn, tất cả gặp nhau tại sàn. Mỗi giá thể hiện một sự đồng thuận tạm thời về giá trị giữa người mua, người bán, và các trader chưa quyết định tại thời điểm giao dịch. Có một đám đông đằng sau mỗi mô hình trên màn hình.
 Sự đồng thuận của đám đông thay đổi mọi lúc. Đôi khi nó thể hiện trong một môi trường rất yên tĩnh, và ở các thời điểm khác thị trường điên dại. Giá dịch chuyển từng bước nhỏ trong suốt các thời điểm yên tĩnh. Khi một đám đông trở nên hoảng sợ hoặc phấn khích, giá bắt đầu nhảy. Hãy tưởng tượng rằng đấu thầu cho một cái áo phao trên một con thuyền chìm – đó là cách giá nhảy vọt khi các đám đông trader trở nên cảm xúc về một xu hướng. Một trader nhắm vào thị trường trong suốt thời điểm yên tĩnh và chốt lời trong những thời điểm biến động. Điều đó, tất nhiên, hoàn toàn trái ngược với cách những người nghiệp dư làm: họ nhảy vào hoặc ra khi giá bắt đầu chạy, nhưng nhanh chán và không thích thú khi giá đứng yên.
 Các mô hình biểu đồ phản ánh biến động của tâm lý đám đông trong thị trường tài chính. Mỗi phiên giao dịch là một trận chiến giữa phe tăng giá, những người kiếm tiền khi giá tăng, và phe giảm giá, những người kiếm lời khi giá giảm. Mục tiêu của một nhà phân tích kỹ thuật nghiêm túc là khám phá cán cân quyền lực giữa phe mua và phe bán và đặt cược vào
 nhóm thắng cuộc. Nếu phe mua mạnh hơn nhiều, bạn nên mua và giữ lệnh. Nếu phe bán mạnh hơn, bạn nên bán và bán khống. Nếu cả hai phe ngang bằng nhau, một trader khôn ngoan sẽ đứng ngoài cuộc. Anh ấy để phe mua và phe bán đánh nhau, và chỉ vào lệnh khi anh ấy chắc chắn hợp lý là bên nào có nhiều khả năng thắng.
 Giá và khối lượng giao dịch, cùng với các indicator theo dõi chúng, phản ánh hành vi đám đông. Phân tích kỹ thuật tương tự với việc thăm dò ý kiến. Cả hai đều kết hợp giữa khoa học và nghệ thuật: chúng có một phần khoa học vì chúng ta dùng các phương pháp thống kê và máy tính; chúng là một phần nghệ thuật vì chúng ta sử dụng đánh giá cá nhân và kinh nghiệm để giải thích những phát hiện của mình.
 
-Trader - Jesse Gemi, [08/11/2024 08:28]
+Trader - Gemi, [08/11/2024 08:28]
 Trên bài đăng Lance đã đăng về việc "đúng". Điều này nhấn vào nút Nhớ lại ký ức cũ khi tôi nhớ đã được một nhà môi giới cũ trở thành nhà giao dịch chuyên nghiệp nói về việc "đúng hoặc có lãi" cách đây rất lâu. Vì vậy, tối nay, tôi đã tìm kiếm đồ đạc của mình và cuối cùng đã tìm thấy nó. Ban đầu nó là một bản fax. Tôi đã định dạng nó một chút để nhấn mạnh.
 
 Tôi chỉ ước tôi có thể nhớ tất cả những thứ này!
@@ -501,14 +501,14 @@ kích hoạt bạn tham gia giao dịch, ( lựa chọn ), cách bạn sẽ trá
 lý do bạn giao dịch, để lợi nhuận của bạn chạy .
 
 Khi bạn đã có một kế hoạch giao dịch, không bước nào trong số này cần phải suy nghĩ thêm. Nếu họ làm, bạn cần một kế hoạch mới. Và nếu bạn biếtbạn cần một cái mới, tại sao lại giao dịch với cái cũ?
-Trader - Jesse Gemi, [08/11/2024 08:28]
+Trader - Gemi, [08/11/2024 08:28]
 Các đám đông lớn giao dịch cổ phiếu, hàng hóa, và trao đổi quyền chọn. Tiền lớn và tiền nhỏ, tiền thông minh và tiền ngu ngốc, tiền công ty hay tiền cá nhân, các nhà đầu tư dài hạn và các trader ngắn hạn, tất cả gặp nhau tại sàn. Mỗi giá thể hiện một sự đồng thuận tạm thời về giá trị giữa người mua, người bán, và các trader chưa quyết định tại thời điểm giao dịch. Có một đám đông đằng sau mỗi mô hình trên màn hình.
 Sự đồng thuận của đám đông thay đổi mọi lúc. Đôi khi nó thể hiện trong một môi trường rất yên tĩnh, và ở các thời điểm khác thị trường điên dại. Giá dịch chuyển từng bước nhỏ trong suốt các thời điểm yên tĩnh. Khi một đám đông trở nên hoảng sợ hoặc phấn khích, giá bắt đầu nhảy. Hãy tưởng tượng rằng đấu thầu cho một cái áo phao trên một con thuyền chìm – đó là cách giá nhảy vọt khi các đám đông trader trở nên cảm xúc về một xu hướng. Một trader nhắm vào thị trường trong suốt thời điểm yên tĩnh và chốt lời trong những thời điểm biến động. Điều đó, tất nhiên, hoàn toàn trái ngược với cách những người nghiệp dư làm: họ nhảy vào hoặc ra khi giá bắt đầu chạy, nhưng nhanh chán và không thích thú khi giá đứng yên.
 Các mô hình biểu đồ phản ánh biến động của tâm lý đám đông trong thị trường tài chính. Mỗi phiên giao dịch là một trận chiến giữa phe tăng giá, những người kiếm tiền khi giá tăng, và phe giảm giá, những người kiếm lời khi giá giảm. Mục tiêu của một nhà phân tích kỹ thuật nghiêm túc là khám phá cán cân quyền lực giữa phe mua và phe bán và đặt cược vào
 nhóm thắng cuộc. Nếu phe mua mạnh hơn nhiều, bạn nên mua và giữ lệnh. Nếu phe bán mạnh hơn, bạn nên bán và bán khống. Nếu cả hai phe ngang bằng nhau, một trader khôn ngoan sẽ đứng ngoài cuộc. Anh ấy để phe mua và phe bán đánh nhau, và chỉ vào lệnh khi anh ấy chắc chắn hợp lý là bên nào có nhiều khả năng thắng.
 Giá và khối lượng giao dịch, cùng với các indicator theo dõi chúng, phản ánh hành vi đám đông. Phân tích kỹ thuật tương tự với việc thăm dò ý kiến. Cả hai đều kết hợp giữa khoa học và nghệ thuật: chúng có một phần khoa học vì chúng ta dùng các phương pháp thống kê và máy tính; chúng là một phần nghệ thuật vì chúng ta sử dụng đánh giá cá nhân và kinh nghiệm để giải thích những phát hiện của mình.
 
-Trader - Jesse Gemi, [08/11/2024 08:28]
+Trader - Gemi, [08/11/2024 08:28]
 Trên bài đăng Lance đã đăng về việc "đúng". Điều này nhấn vào nút Nhớ lại ký ức cũ khi tôi nhớ đã được một nhà môi giới cũ trở thành nhà giao dịch chuyên nghiệp nói về việc "đúng hoặc có lãi" cách đây rất lâu. Vì vậy, tối nay, tôi đã tìm kiếm đồ đạc của mình và cuối cùng đã tìm thấy nó. Ban đầu nó là một bản fax. Tôi đã định dạng nó một chút để nhấn mạnh.
 
 Tôi chỉ ước tôi có thể nhớ tất cả những thứ này!
@@ -580,7 +580,7 @@ là dành cho. Tỷ lệ phần trăm không cao. Tổn thất không nhỏ hơn
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Những gì anh ấy nhìn thấy trong 15 đến 30 phút đầu tiên, anh ấy sẽ không bao giờ tin ngay cả khi người bạn thân nhất của anh ấy đã nói với anh ấy. Khi mở cửa, các giao dịch qua đêm, tức là các vị thế mua, đã được thực hiện nhưng anh ấy phát hiện ra rằng các nhà giao dịch tham gia giao dịch đó đang đưa ra tín hiệu cho các nhà giao dịch khác. Sau khi các lệnh được thực hiện thì “không có gì” – họ chỉ chờ xem thị trường phản ứng thế nào với các lệnh đó.
@@ -642,7 +642,7 @@ Cảm ơn Tiến sĩ Joe`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Đôi khi, thua lỗ trong giao dịch khiến ta thất vọng và nghi ngờ về con đường trading của mình. 
@@ -658,7 +658,7 @@ Cảm ơn Tiến sĩ Joe`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Kẻ gan dạ thường all in, nhồi lệnh 
@@ -668,7 +668,7 @@ Chỉ những người không biết sợ là gì (quản lý vốn) mới luôn
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Khi giao dịch tài chính nếu ta đạt trạng thái "mặc kệ lệnh" trong lúc lệnh đang chạy
@@ -681,7 +681,7 @@ Rơi vào trạng thái "không còn nỗi đau hoặc ít nỗi đau nhất" kh
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Ví dụ bạn mua cổ phiếu ở mức giá $30, hôm sau giá cổ phiếu đó tăng lên $32 hay $32.50. Bạn cảm thấy sợ rằng nếu bạn không chốt lời ngay thì hôm sau có thể không còn có giá đó nữa. Vì thế bạn chấp nhận một khoản lợi nhuận nho nhỏ trong khi bạn có thể mong đợi hơn thế. Tại sao bạn lại lo sợ mất đi lợi nhuận $2/cổ phiếu mà hôm trước bạn vẫn chưa có được? Nếu bạn có lời $2 trong một ngày thì bạn có thể kiếm được $2-$3 trong ngày tiếp theo, thậm chí là $5 trong tuần tới. Khi thị trường đang đi đúng hướng, đừng nên vội vã chốt lời. Bởi vì bạn biết rằng mình đã đúng, nếu không thì bạn chẳng có đồng lời nào cả. Cứ để thị trường đi tiếp con đường của nó và hãy đi theo nó, bạn có thể kiếm được một món lợi lớn miễn là hoạt động của thị trường không có những dấu hiệu khiến bạn lo ngại, hãy giữ vững niềm tin của bạn.
@@ -692,7 +692,7 @@ Có lời thì cứ để tiếp, nhưng đã lỗ thì không bao giờ để l
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Khi bạn không cảm nhận đường xu hướng chính của thị trường 
@@ -712,7 +712,7 @@ thì phụ thuộc tâm lý giao dịch của bạn.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Khi giao dịch đủ lâu ta nhận thức được
@@ -731,7 +731,7 @@ việc của ta là chờ thủng hỗ trợ thì bán - và phá kháng cự th
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Hi Vọng – Kẻ Thù Nguy Hiểm Nhất Của Trader 
@@ -742,7 +742,7 @@ Khi lỗ, hãy cắt sớm. Bởi vì, thị trường đã đi ngược lại n
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Nếu bạn không sẵn sàng cắt lỗ 
@@ -756,7 +756,7 @@ trước khi bắt đầu mọi hoạt động giao dịch trên thị trường
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Mỗi phương pháp giao dịch đều hướng tới một mục tiêu chung: nắm bắt được xu hướng thị trường. Nhưng dù chiến lược có hay đến đâu, khi áp dụng vào thực tế thì mắt xích yếu nhất lại là chính  con người.
@@ -765,7 +765,7 @@ Thiếu kỷ luật, quản lý vốn kém, những cảm xúc như tham lam, s�
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Trong thị trường, có vô số phương pháp giao dịch hữu ích và hiệu quả. 
@@ -781,7 +781,7 @@ Khi đó, tiền chỉ là phần thưởng cho việc tuân thủ và thực hi
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Sự chú ý ->  quan trọng hơn sự tập trung -> sự chú ý đủ dẫn đến -> ý thức -> nắm bắt được mọi thứ nó như là -> tâm trí của bạn ko hoạt đông như tấm gương, nó luôn bóp méo mọi thứ và tạo ra những thứ thiết kế ở nơi chúng không tồn tại ->. có ý thức tâm trí bạn giống như một tấm gương đơn giản , nó chỉ thể hiện mọi thứ như nó vốn có -> chỉ khi bạn nhìn nhận mọi. thứ như nó vốn có -> bạn mới có khả năng xử lý mọi việc một cách hợp lý`,
@@ -789,7 +789,7 @@ Khi đó, tiền chỉ là phần thưởng cho việc tuân thủ và thực hi
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Khi bạn không cảm nhận đường xu hướng chính của thị trường 
@@ -809,7 +809,7 @@ thì phụ thuộc tâm lý giao dịch của bạn.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Chúng ta không cần một kế hoạch giao dịch hoàn hảo, mà cần một kế hoạch rõ ràng.
@@ -820,7 +820,7 @@ Sự "hoàn hảo" có thể mang lại sự tự tin tạm thời, nhưng khôn
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `3 cái khác biệt giữa người trader thành công và không thành công.
@@ -831,7 +831,7 @@ Cuối cùng, họ khác vì họ hành động và triển khai hiệu quả, q
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Market sẽ dạy ta khôn lớn qua những lần cháy tài khoản
@@ -855,7 +855,7 @@ Loại họ ra khỏi cuộc chơi tài chính.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Hi Vọng – Kẻ Thù Nguy Hiểm Nhất Của Trader 
@@ -866,7 +866,7 @@ Khi lỗ, hãy cắt sớm. Bởi vì, thị trường đã đi ngược lại n
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `SỰ SỢ HÃI TRONG TRADING
@@ -883,7 +883,7 @@ Nhận thức đúng:
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Phía bên trái màn hình những thứ đã xảy ra rồi, ai cũng dễ dàng phân tích được, khi giá đã chạy xong.
@@ -894,7 +894,7 @@ Nên ae đừng quá ảo tưởng, thần thánh hoá vào phương pháp, hệ
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `THẤT BẠI – Chìa khóa dẫn đến thành công trong trading
@@ -911,7 +911,7 @@ Hãy nhớ: thất bại là một phần của cuộc chơi, không thất
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Khi bắt đầu đặt cược và đặt tiền xuống 
@@ -929,7 +929,7 @@ và kết quả là gì chắc ae đều biết.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Tiếng gọi của thị trường luôn có sức hút mạnh mẽ, dễ dàng khiến ta bị cuốn vào mà không nhận ra. Khi cảm giác thôi thúc "muốn vào lệnh" xuất hiện, hãy dừng lại và tự hỏi: Tại sao mình lại muốn làm điều này? Đây là bước đầu để nhận thức rõ thói quen của bản thân.
@@ -939,7 +939,7 @@ Lúc đó, điều tốt nhất bạn có thể làm là đứng dậy, rời xa
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Tâm Lý Giao Dịch
@@ -950,7 +950,7 @@ Không có sách vở nào dạy bạn điều này, cũng chẳng có khóa h�
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Thị trường là một nơi thú vị, nhưng cũng đầy khắc nghiệt. Hồi mới vào nghề, mình từng nghĩ rằng cơ hội lúc nào cũng tràn ngập, cứ giao dịch nhiều là kiếm được nhiều. Nhưng dần dà, mình nhận ra một sự thật phũ phàng: thị trường không chỉ những có cơ hội, mà còn là rất nhiều cạm bẫy nguy hiểm được ngụy trang khéo léo.
@@ -961,7 +961,7 @@ Trading là một hành trình dài – không dành cho những kẻ vội vàn
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Khi bạn vội bấm Buy/Sell mà không kiểm tra kỹ setup, đó không phải thị trường ép bạn – mà chính bạn tự đẩy mình vào rủi ro. Sợ "mất cơ hội," nghĩ "ổn rồi, vào luôn!" – nhưng sau đó, điều chờ đợi bạn là sl . Rồi sau khi sl bạn quay lại nhìn biểu đồ, mới thấy thiếu 1-2 yếu tố vào lệnh, hoặc thậm chí chẳng có yếu tố nào khớp với hệ thống giao dịch / kế hoạch giao dịch bạn đã đặt ra ban đầu.
@@ -976,7 +976,7 @@ không phải một vài pha FOMO bốc đồng.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Mỗi phương pháp giao dịch đều hướng tới một mục tiêu chung: nắm bắt được xu hướng thị trường. Nhưng dù chiến lược có hay đến đâu, khi áp dụng vào thực tế thì mắt xích yếu nhất lại là chính  con người.
@@ -985,7 +985,7 @@ Thiếu kỷ luật, quản lý vốn kém, những cảm xúc như tham lam, s�
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Khi bạn phân tích thị trường, bạn đang nhìn vào hành vi đám đông.
@@ -994,7 +994,7 @@ Các đám đông cư xử giống nhau trong các nền văn hóa khác nh
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Cơ hội thì thấy đó nhưng vấn đề gồng lời, gồng lỗ của mỗi cá nhân khác nhau, vì tâm lý khác nhau , mà để muốn gồng lời tốt thì phụ thuộc lại kiến thức, kinh nghiệm, trải nghiệm và vị thế bản thân, mà mỗi cá nhân kiến thức, kinh nghiệm, trải nghiệm khác nhau, nên kết quả sẽ khác nhau, kết lại phần thưởng luôn dành cho những người làm tốt hơn, bất kể các lĩnh vực nào cũng vậy. Vậy nên đừng trách bản thân mình, cứ thất bại, cứ trải nghiệm, học hỏi, rèn luyện để mài giũa, sau này cơ hội khác chúng ta sẽ là người chiến thắng.`,
@@ -1002,7 +1002,7 @@ Các đám đông cư xử giống nhau trong các nền văn hóa khác nh
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Trong đầu tư, ai cũng nhắm đến lợi nhuận. Đặc biệt là những người mới, luôn tập trung vào việc làm sao để "nhân đôi, nhân ba" số vốn của ho. Họ chưa đủ trải nghiệm kinh nghiệm,, chưa nếm đủ thất bại từ thị trường, nên họ thường bỏ qua cái gọi là rủi ro trong giao dịch.
@@ -1012,7 +1012,7 @@ Nhưng đối với những người đã trải qua bao thăng trầm, đã nhi
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Cảm giác lo sợ xuất phát từ việc chúng ta không nhìn vào đúng tài khoản giao dịch của mình. Bản chất và chất lượng giao dịch của chúng ta phụ thuộc vào việc chúng ta Quản Lý Vốn như thế nào trong giao dịch.
@@ -1021,7 +1021,7 @@ Nhưng đối với những người đã trải qua bao thăng trầm, đã nhi
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Tại sao biết hết rồi mà vẫn thua, vì chưa đủ trải nghiệm, kinh nghiệm,..
@@ -1032,7 +1032,7 @@ Không phải biết hết rồi sẽ thắng, nó cần phải có các giai đ
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Phía bên trái màn hình những thứ đã xảy ra rồi, ai cũng dễ dàng phân tích được.
@@ -1041,7 +1041,7 @@ Nhưng phía bên phải màn hình là tương lai, là những thứ không ch
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Tại sao chúng ta không kỷ luật trong giao dịch, có rất nhiều yếu tố, nhưng những yếu tố chính là do chúng ta thiếu kiên nhẫn với thị trường, không có kế hoạch & hệ thống giao dịch rõ ràng và có những thói quen xấu trong giao dịch.`,
@@ -1049,7 +1049,7 @@ Nhưng phía bên phải màn hình là tương lai, là những thứ không ch
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Thành công trong giao dịch không chỉ phụ thuộc vào phân tích chính xác mà còn vào thời điểm hành động. Tâm lý là yếu tố quyết định, phân tích thì hay mà tâm lý như hạch cũng vứt. Kinh nghiệm thực chiến quan trọng hơn lý thuyết`,
@@ -1057,7 +1057,7 @@ Nhưng phía bên phải màn hình là tương lai, là những thứ không ch
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Ý nghĩa stop-loss
@@ -1066,7 +1066,7 @@ Trong giao dịch tài chính như forex, stop-loss là một công cụ cực k
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Việc bạn xử lý giao dịch một cách có ý thức hay vô thức sẽ quyết định tài khoản của bạn , kỷ luật follow theo hệ thống của bạn một cách nhất quán thì thành công sẽ đến với bạn.`,
@@ -1082,7 +1082,7 @@ Trong giao dịch tài chính như forex, stop-loss là một công cụ cực k
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `"Chỉ khi bạn không ngừng nỗ lực để hòa nhập hoàn toàn vào thị trường giao dịch, bạn mới có thể khám phá sâu sắc và đa chiều của những cơ hội mà bạn có thể tận dụng."`,
@@ -1090,7 +1090,7 @@ Trong giao dịch tài chính như forex, stop-loss là một công cụ cực k
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Chúng ta thường thua là do tính hay thay đổi kế hoạch ban đầu, vào lệnh rồi mà còn phân tích này phân tích nọ, phân tích lại rồi sửa stoploss , sửa entry, sửa target , rồi lại loss, lại cháy tài khoản vì những lần sửa lệnh. Nói giá như ban đầu mình giữ như vậy là ngon rồi, mua ra bán vào chi cho mệt , tối ưu đâu ko thấy toàn thấy tối thui mặt mày luôn.
@@ -1102,7 +1102,7 @@ Còn sau đó để thị trường sẽ đưa bạn ra khỏi thị trường.`
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Nhiều người hay nghĩ muốn đầu tư hiệu quả thì phải liên tục dán mắt vào thị trường, nhưng thực tế không cần phải vậy. Thị trường có lúc cần chờ đợi, không phải lúc nào cũng có cơ hội rõ ràng để vào lệnh. Quan trọng là kiên nhẫn, đợi cho các điều kiện phù hợp xuất hiện. Ép mình phải giao dịch liên tục không chỉ gây mệt mỏi mà còn ảnh hưởng xấu đến sức khỏe và đời sống. Thay vì chạy theo số lượng giao dịch, hãy tập trung vào chất lượng của từng giao dịch.`,
@@ -1110,7 +1110,7 @@ Còn sau đó để thị trường sẽ đưa bạn ra khỏi thị trường.`
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Đừng chỉ nghĩ đến việc kiếm tiền,
@@ -1121,7 +1121,7 @@ là làm theo những gì bạn đã lên kế hoạch.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Không như nhiều người nghĩ, trading đòi hỏi tính kiên nhẫn của một trader nhiều hơn là sự nhanh nhẹn.
@@ -1141,7 +1141,7 @@ Và nếu bạn là một người THIẾU KIÊN NHẪN, thì nghề trader có 
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Muốn giao dịch kiếm lợi nhuận ổn định, thì việc quản lý vốn là điều hiển nhiên phải có ở mỗi trader chuyên nghiệp, các trader chuyên nghiệp chỉ chấp nhận rủi ro tối đa 1-2% cho mỗi giao dịch để bảo vệ tài khoản của mình.Còn những trader nghiệp dư thường thất bại bởi vì 3 nguyên nhân :
@@ -1155,7 +1155,7 @@ Nếu nhìn ra lỗi rồi xem có khắc phục được không. Nếu không, 
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Tâm lý trong đầu tư là thứ ít ai để ý, nhưng lại ảnh hưởng cực kỳ lớn. Khi bị lỗ, nhiều người cứ cố “gồng lỗ”, và viện đủ lý do để không cắt lệnh, nhưng thực ra, sâu bên trong là đang hy vọng. Hy vọng giá sẽ quay lại điểm entry để cắt hoà.
@@ -1167,7 +1167,7 @@ Thị trường luôn có cách đẩy chúng ta vào các trạng thái tâm l�
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Bất kể thị trường nào, cũng sẽ có những cú sập không thương tiếc. Mỗi lần sập là một đợt thanh lọc, loại bỏ những kẻ không đủ bản lĩnh để chiến đấu. Những ai vay mượn, huy động vốn với hy vọng đổi đời nhanh chóng cuối cùng chỉ nhận lấy thất bại, rồi âm thầm rời bỏ thị trường.
@@ -1177,7 +1177,7 @@ Chỉ có những người lì đòn, chịu được áp lực mới sống só
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Khi tham gia những trò cờ bạc mang tính giải trí, bạn không đơn giản là chơi để chống lại các tỷ lệ cược. Bạn còn phải chiến đấu với một kẻ thù được tạo ra trong nghệ thuật của sự lừa dối và ma mãnh.
@@ -1193,7 +1193,7 @@ Nhưng cờ bạc không chỉ là lời hứa suông về vận may, rằng và
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Tại sao nhiều người thua khi giao dịch Forex dù chỉ có lệnh mua hoặc bán?
@@ -1209,7 +1209,7 @@ Trong giao dịch Forex, ưu tiên hàng đầu không phải là kiếm đượ
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Trading không phải là con đường làm giàu nhanh chóng.
@@ -1222,7 +1222,7 @@ Nếu anh em không thực sự đam mê, không yêu thích việc khám phá t
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Hãy cứ chịu khó gieo hạt, trồng cây, tưới tắm,...đồng thời vun bồi học hỏi kỹ thuật gieo trồng để làm sao cây ít chết, phát triển nhanh & cho năng suất cao. Đến một ngày nào đó khi bạn già & mệt ngồi dưới một gốc cây, đó rất có thể là cây mà chính bạn trước kia đã gieo trồng & chăm sóc. Bạn xứng đáng được hưởng trái ngọt & bóng mát.
@@ -1234,7 +1234,7 @@ Nên làm gì cũng thuận theo tự nhiên, đừng khôn lỏi đi tắt đó
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Trong cuộc sống và hành trình giao dịch, mọi việc đều do chính bản thân ta.
@@ -1252,7 +1252,7 @@ và đánh giá khả năng giao dịch của bản thân trước khi xuống t
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Cảm giác "tự do" trong đầu tư xuất hiện khi bạn tự tin vào quyết định của mình, không bị ảnh hưởng bởi những ý kiến từ bên ngoài. Nhiều nhà đầu tư thường bị lạc hướng bởi những lời khuyên từ các diễn đàn hay cộng đồng, khiến họ quên rằng họ có thể tự xây dựng chiến lược riêng.
@@ -1264,7 +1264,7 @@ Hãy dành thời gian để tự mình suy nghĩ, xem lại các kế hoạch c
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Ralph Waldo Emerson từng nói rằng trong cuộc sống, bạn nhận được những gì bạn cho đi. Nếu bạn muốn có nhiều hơn, bạn phải đóng góp nhiều hơn cả về chất lượng lẫn số lượng. Điều này cũng đúng trong giao dịch tài chính. Nhiều người chỉ nhìn vào lợi nhuận của người khác mà không thấy những gì họ đã đầu tư: thời gian, công sức, học hỏi và vốn liếng. Trước khi mong muốn thành công, hãy tự hỏi liệu bạn đã sẵn sàng trả giá đủ lớn chưa? Thành công không có đường tắt; nó là kết quả của quá trình chăm chỉ và đầu tư. Khi bạn đã phát triển đủ về kiến thức và tài chính, thành quả sẽ đến với bạn.`,
@@ -1272,7 +1272,7 @@ Hãy dành thời gian để tự mình suy nghĩ, xem lại các kế hoạch c
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Thị trường được tạo bởi hành vi mua bán của mỗi cá thể
@@ -1285,7 +1285,7 @@ Nên hãy dựa vào tâm lý bản thân, tâm lý market để tránh những 
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Đừng bao giờ để mức thua lỗ quá 10% lượng vốn đầu tư. Livermore học được điều này khi làm việc trong các cơ quan môi giới khi đăng ký với mức giới hạn 10% và tự động bán ra nếu thua lỗ vượt quá mức giới hạn. Đây là một trong những nguyên tắc quan trọng trong quản lý tiền.
@@ -1299,7 +1299,7 @@ Chỉ khi tất cả các yếu tố của thị trường đều có lợi cho 
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Kẻ thù lớn nhất của trader không phải là thị trường, mà chính là bản thân anh ta. Cảm xúc như hi vọng và sợ hãi là hai thứ luôn tồn tại trong mỗi con người, nhưng khi giao dịch, chúng lại là nguyên nhân dẫn đến thất bại.
@@ -1311,7 +1311,7 @@ Một trader giỏi là người biết kiểm soát cảm xúc của chính mì
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Thiếu kiên nhẫn là điểm yếu chí mạng của nhiều trader. Nỗi lo "sợ hết cơ hội" hay "người khác ăn hết phần của mình" dễ khiến bạn nôn nóng và vào lệnh bừa bãi.
@@ -1323,7 +1323,7 @@ Kiên nhẫn là công cụ giúp bạn tránh được những entry xấu, và
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Lòng tham, nỗi sợ hãi, và hy vọng – những cảm xúc rất con người – lại chính là "kẻ thù" nguy hiểm nhất của mọi trader.
@@ -1334,7 +1334,7 @@ Khi đi vol lớn, lòng tham, hy vọng và nỗi sợ hãi càng dễ bị kí
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Khi đã bước chân vào nghề này đủ lâu, bạn sẽ phải đối mặt với một sự thật đau đớn: cắt lỗ không phải là kỹ năng, mà là bài học vô giá đánh đổi bằng máu và tiền.
@@ -1349,7 +1349,7 @@ Nếu lệnh đã tới điểm stoploss, hãy cắt lỗ, cắt lỗ và
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Để tồn tại lâu trên thị trường, bạn cần một kế hoạch cụ thể cho từng kịch bản của đường giá. Thị trường không phải lúc nào cũng đi theo phân tích của bạn. Nếu không có sự chuẩn bị trước, bạn sẽ dễ rơi vào trạng thái hy vọng mù quáng, mong chờ giá quay đầu trong bất lực.
@@ -1358,7 +1358,7 @@ KẾ HOẠCH RÕ RÀNG sẽ giúp bạn giữ vững tâm lý, loại bỏ sự 
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Khi đã bước chân vào nghề này đủ lâu, bạn sẽ phải đối mặt với một sự thật đau đớn: cắt lỗ không phải là kỹ năng, mà là bài học vô giá đánh đổi bằng máu và tiền.
@@ -1370,7 +1370,7 @@ Nếu lệnh đã tới điểm stoploss, hãy cắt lỗ, cắt lỗ và
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Thương Trường Như Chiến Trường
@@ -1382,7 +1382,7 @@ Trong khi đó, hãy nhìn các chiến binh thực thụ. Họ không ngừng r
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `THE KEY 2025 : SỰ RÕ RÀNG
@@ -1400,7 +1400,7 @@ Ae người mới bắt đầu từ đó, từ từ làm theo rồi nh
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Hai năng lực mạnh nhất của con người:
@@ -1412,7 +1412,7 @@ Cốt lõi của vấn đề nằm ở việc nhận diện và làm chủ hiệ
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Trader – Nghề của những nhà quản lý rủi ro chuyên nghiệp
@@ -1436,7 +1436,7 @@ Dự đoán đúng hay sai chỉ là một phần của trò chơi. Cái khiến
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Trong các lựa chọn mua, bán hay đứng ngoài, thì ĐỨNG NGOÀI thị trường thường là quyết định khôn ngoan nhất. 
@@ -1457,7 +1457,7 @@ P/s: Viết cho những bạn hay copy bài mình mà *éo ghi nguồn, t
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Trong các lựa chọn mua, bán hay đứng ngoài, thì ĐỨNG NGOÀI thị trường thường là quyết định khôn ngoan nhất.
@@ -1468,7 +1468,7 @@ Và cách kiếm tiền nhanh nhất là kiếm tiền thật chậm.`
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Thói quen sĩ diện và cách ta tương tác với cái tôi thường rất phức tạp. Ta thường tự giữ lại những chi tiết thắng lợi, để thể hiện cho mình là một người thành công, nhưng khi gặp thất bại, ta lại cảm thấy khó lòng thú nhận và che giấu đi.
@@ -1480,7 +1480,7 @@ P/s: Nên lên mxh thì lệnh thắng up story kèm nhạc giựt gựt cap cut
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Khi giao dịch tài chính nếu ta đạt trạng thái  "mặc kệ lệnh" trong lúc lệnh đang chạy
@@ -1493,7 +1493,7 @@ Rơi vào trạng thái "không còn nỗi đau hoặc ít nỗi đau nhất" kh
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Nếu là trader mình nghĩ nên bỏ pp DCA khi âm đi, và luôn đặt stoploss cho mỗi chiến lược giao dịch
@@ -1505,7 +1505,7 @@ Nên số đông trader mới vào nghề ko tồn tại quá 3 năm là vì v�
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Trong cuộc sống, áp lực thường khiến con người dễ bị lạc hướng và đuổi theo dòng chảy. Đặc biệt trong giao dịch, cám dỗ để theo đuổi các hành động của người khác có thể là một nguy hiểm lớn, dù đôi khi bạn có thể bỏ lỡ các cơ hội quan trọng. Đó là lý do tại sao việc có một hệ thống giao dịch và tuân thủ nguyên tắc quản lý vốn là cực kỳ quan trọng. Chúng không chỉ đại diện cho quyết định cá nhân hợp lý mà còn là cánh cửa mở ra cho sự tự chủ và định hình rõ ràng trước khi bạn thực hiện bất kỳ động thái nào trên thị trường.`,
@@ -1513,7 +1513,7 @@ Nên số đông trader mới vào nghề ko tồn tại quá 3 năm là vì v�
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Ở cái thị trường này, thằng nào kỉ luật, kiên nhẫn chắc chắc thắng, vì đa số các người tham gia giao dịch là vô kỷ luật, dẫn đến thua lỗ, cháy tài khoản , việc 1 trader tuân theo kế hoạch của mình thì gần như rất khó để market loại a ta ra khỏi cuộc chơi.`,
@@ -1521,7 +1521,7 @@ Nên số đông trader mới vào nghề ko tồn tại quá 3 năm là vì v�
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Ý nghĩa của 'STOP LOSS' là gì, nghĩa là khi ta dính stop loss là nhận định của ta đã sai,
@@ -1531,7 +1531,7 @@ Bởi vì ta cố chấp ko chấp nhận mình sai, nên mới dời stoploss, 
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Ở thị trường tài chính này, 90% người chơi là thua lỗ:
@@ -1544,7 +1544,7 @@ không cắt lỗ, kỳ vọng quá cao, hy vọng quá nhiều, sợ hãi khi c
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Nguyên tắc khi cài stoploss:
@@ -1553,7 +1553,7 @@ Là không được tháo hay di dời điểm stoploss, hãy để stoploss là
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Được - mất luôn đi đôi với nhau
@@ -1578,7 +1578,7 @@ còn lại chỉ là lời biện mình cho quan điểm ngu dốt của 
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Mỗi lần thất bài đau đớn, là một bài học đắt giá
@@ -1594,7 +1594,7 @@ Nó chỉ không tốt khi ta không rút ra được gì từ thất ba�
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Việc mà tiền nằm trong tài khoản, mà nhìn chart mà không trade thì phải gọi là đẳng cấp lắm
@@ -1609,7 +1609,7 @@ một bài học mấy người vượt qua, vượt qua được là ch
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Không vào lệnh khi biểu đồ không cho vào thì đã rất thành công rồi
@@ -1630,7 +1630,7 @@ chứ đừng sài phung phí, đến khi mục tiêu vào tầm bắn t
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Nói KHÔNG với giao dịch không đúng set up của mình,nếu vẫn cố chấp vào lệnh không đúng set up của mình thì là thằng trader không có nhận thức rồi, luôn u mê bởi những cạm bẫy mà market giăng ra.`,
@@ -1638,7 +1638,7 @@ chứ đừng sài phung phí, đến khi mục tiêu vào tầm bắn t
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Những thói quen nên loại bỏ khi muốn kiếm tiền từ thị trường này:
@@ -1667,7 +1667,7 @@ P/s: Viết cho một người bạn ở ngoài, nói ra trước mặt 
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `CÁCH ĐỂ TỒN TẠI VÀ KIẾM TIỀN TRONG MARKET 
@@ -1686,7 +1686,7 @@ Rất đơn giản, là KHÔNG LÀM những gì mà các trader thua lỗ, trade
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `HY VỌNG & SỢ HÃI – 2 TÂM LÝ ĐIỂN HÌNH KHI GIAO DỊCH CỦA TRADER
@@ -1713,7 +1713,7 @@ Vậy tổng cuộc chơi ae xem ai là người tồn tại, ae hay market , 95
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Chia sẻ về kinh nghiệm gồng lời
@@ -1734,7 +1734,7 @@ Ví dụ: Bình thường ae trade đặt sl 100$ cho 1 lệnh, lúc vào l�
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `KHOẢNG CÁCH TỪ BIẾT ĐẾN LÀM
@@ -1758,7 +1758,7 @@ NÊN KHOẢNG CÁCH TỪ BIẾT ĐẾN LÀM NÓ XA VỜI VỢI.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Viết cho ae đã trade lâu ( bài viết không dành cho ae newbie)
@@ -1772,7 +1772,7 @@ Bây giờ ae đã nhận thức được lý do vì sao chưa, nên ae h
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Khi không xác định được điểm vào lệnh
@@ -1787,7 +1787,7 @@ Và cắt lỗ, chốt lời theo khung thời gian nhỏ để tối ư
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `THÔI THÚC KHÓ CƯỠNG TRONG TRADING
@@ -1807,7 +1807,7 @@ Vậy khi có trạng thái cảm xúc "THÔI THÚC KHÓ CƯỠNG" này lặp l�
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Khi không xác định được điểm vào lệnh
@@ -1822,7 +1822,7 @@ Và cắt lỗ, chốt lời theo khung thời gian nhỏ để tối ư
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Nghiên cứu sự thất bại của người khác để tự soi lại chính bản thân mình
@@ -1837,7 +1837,7 @@ CHỐT LẠI LÀ CÓ ĐANG QUẢN LÝ VỐN KO :))`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `BỚT TÍNH TOÁN CHI LI VÀ HÃY THOẢI MOÁI HƠN VỚI MỌI NGƯỜI.
@@ -1855,7 +1855,7 @@ Thực ra, thị trường trả ae bao nhiêu là tùy vào năng lực, tâm l
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Bạn chẳng cần phải là một học giả lỗi lạc mới hiểu được điều này. 
@@ -1876,7 +1876,7 @@ Bởi vì cuối cùng, bạn chỉ có thể thắng nếu bạn trade giỏi �
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `LÀM SAO ĐỂ KỶ LUẬT TRONG TRADING?
@@ -1891,7 +1891,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: `Nếu bạn xử lý giao dịch được thực thi trong Hiện Tại một cách có ý thức, bạn sẽ không tạo ra bất kỳ giao dịch được thực thi trong Tương Lai nào mang tính thôi thúc khó cưỡng. Đây chính là mấu chốt việc xử lý giao dịch và loại bỏ một loạt sai lầm không đáng có ở thì Tương Lai.`,
@@ -1899,7 +1899,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -1907,7 +1907,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -1915,7 +1915,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -1923,7 +1923,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -1931,7 +1931,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -1939,7 +1939,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -1947,7 +1947,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -1955,7 +1955,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -1963,7 +1963,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -1971,7 +1971,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -1979,7 +1979,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -1987,7 +1987,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -1995,7 +1995,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -2003,7 +2003,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -2012,7 +2012,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
 
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -2020,7 +2020,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -2028,7 +2028,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,
@@ -2036,7 +2036,7 @@ Chúc ae tìm được VOL PHÙ HỢP VỚI BẢN THÂN MÌNH.`,
   },
   {
     id: 5,
-    author: "Jesse Gemi",
+    author: "Gemi",
     time: "12 giờ trước",
     content: "",
     fullContent: ``,

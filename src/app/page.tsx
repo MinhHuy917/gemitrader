@@ -83,16 +83,16 @@ function AboutPreview() {
             </div>
             <div className="mt-8 grid gap-6 sm:grid-cols-3">
               <div className="flex flex-col">
-                <div className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">7+</div>
-                <div className="mt-2 text-base text-neutral-600 dark:text-neutral-300">Năm kinh nghiệm trading</div>
+                <div className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">8+</div>
+                <div className="mt-2 text-base text-neutral-600 dark:text-neutral-300">Tám kinh nghiệm trading</div>
               </div>
               <div className="flex flex-col">
-                <div className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">1000+</div>
-                <div className="mt-2 text-base text-neutral-600 dark:text-neutral-300">Lệnh đã thực hiện</div>
+                <div className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">Thực chiến</div>
+                <div className="mt-2 text-base text-neutral-600 dark:text-neutral-300">Thị trường forex & crypto</div>
               </div>
               <div className="flex flex-col">
-                <div className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">500+</div>
-                <div className="mt-2 text-base text-neutral-600 dark:text-neutral-300">Trader đã hướng dẫn</div>
+                <div className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">Chia sẻ</div>
+                <div className="mt-2 text-base text-neutral-600 dark:text-neutral-300">Thứ còn lại sau sai lầmn</div>
               </div>
             </div>
             <div className="mt-8 space-y-4 text-base text-neutral-600 dark:text-neutral-300">
