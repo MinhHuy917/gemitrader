@@ -73,42 +73,40 @@ function AboutPreview() {
             <div className="flex flex-col gap-4">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary dark:text-primary-400">Về tôi</p>
               <h2 className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">
-                Trader chuyên nghiệp với hơn 8 năm kinh nghiệm
+              Hành trình hơn 7 năm cùng thị trường tài chính
               </h2>
-              <p className="max-w-3xl text-base text-neutral-600 dark:text-neutral-300">
-                Tôi là một trader chuyên nghiệp với hơn 8 năm kinh nghiệm trong lĩnh vực giao dịch. 
-                Hành trình của tôi từ một người mới bắt đầu đến trader có thể kiếm sống từ nghề này 
-                đã cho tôi những bài học quý giá mà tôi muốn chia sẻ với bạn.
+              <p className="max-w-3xl text-base text-neutral-600 dark:text-white">
+              Mình là Gemi — một trader đã gắn bó với thị trường tài chính hơn 7 năm, bắt đầu từ những ngày đầu đầy mơ hồ, thiếu kinh nghiệm và không ít lần thất bại. Hành trình từ một người mới bước chân vào thị trường đến khi có thể sống cùng trading đã mang lại cho mình nhiều bài học đắt giá, không chỉ về chiến lược giao dịch mà còn về tâm lý và cách hiểu chính bản thân mình.
               </p>
             </div>
-            <div className="mt-8 grid gap-6 sm:grid-cols-3">
+            {/* <div className="mt-8 grid gap-6 sm:grid-cols-3">
               <div className="flex flex-col">
                 <div className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">8+</div>
-                <div className="mt-2 text-base text-neutral-600 dark:text-neutral-300">Tám kinh nghiệm trading</div>
+                <div className="mt-2 text-base text-neutral-600 dark:text-white">Tám kinh nghiệm trading</div>
               </div>
               <div className="flex flex-col">
                 <div className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">Thực chiến</div>
-                <div className="mt-2 text-base text-neutral-600 dark:text-neutral-300">Thị trường forex & crypto</div>
+                <div className="mt-2 text-base text-neutral-600 dark:text-white">Thị trường forex & crypto</div>
               </div>
               <div className="flex flex-col">
                 <div className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">Chia sẻ</div>
-                <div className="mt-2 text-base text-neutral-600 dark:text-neutral-300">Thứ còn lại sau sai lầmn</div>
+                <div className="mt-2 text-base text-neutral-600 dark:text-white">Thứ còn lại sau sai lầmn</div>
               </div>
-            </div>
-            <div className="mt-8 space-y-4 text-base text-neutral-600 dark:text-neutral-300">
+            </div> */}
+            <div className="mt-8 space-y-4 text-base dark:text-white">
               <p>
-                Sau nhiều năm trading, tôi nhận ra rằng <strong className="text-neutral-950 dark:text-neutral-50">kiến thức chỉ có giá trị khi được chia sẻ.</strong> 
-                Website này được tạo ra với mục đích gieo duyên và chia sẻ - chia sẻ những gì tôi đã học được, 
-                những sai lầm tôi đã mắc phải, và những bài học quý giá mà tôi đã tích lũy qua hơn 8 năm trong thị trường.
+                Sau nhiều năm trading, mình nhận ra rằng <strong className="text-neutral-950 dark:text-neutral-50">kiến thức chỉ có giá trị khi được chia sẻ.</strong> 
+                {' '}  Website này được tạo ra với mục đích gieo duyên và chia sẻ - chia sẻ những gì mình đã học được, 
+                những sai lầm mình đã mắc phải, và những bài học quý giá mà mình đã tích lũy qua hơn 7 năm trong thị trường.
               </p>
               <p>
-                Tôi không hứa hẹn bạn sẽ trở thành triệu phú sau khi đọc blog hay tham gia khóa học. 
-                Nhưng tôi cam kết sẽ chia sẻ với bạn những kiến thức thực tế, những chiến lược đã được kiểm chứng, 
+                Mình không hứa hẹn bạn sẽ trở thành triệu phú sau khi đọc blog hay tham gia khóa học. 
+                Nhưng mình cam kết sẽ chia sẻ với bạn những kiến thức thực tế, những chiến lược đã được kiểm chứng, 
                 và quan trọng nhất - <strong className="text-neutral-950 dark:text-neutral-50">cách tư duy đúng đắn về trading</strong>.
               </p>
             </div>
             <Button href="/about" className="mt-8 w-fit">
-              Đọc thêm về tôi
+              Đọc thêm về mình
             </Button>
           </div>
         </FadeIn>
@@ -125,7 +123,7 @@ function InsightsPreview({ articles }: { articles: Awaited<ReturnType<typeof loa
         <h2 className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">
           Góc nhận định thị trường hằng tuần
         </h2>
-        <p className="max-w-3xl text-base text-neutral-600 dark:text-neutral-300">
+        <p className="max-w-3xl text-base text-neutral-600 dark:text-white">
           Những bài viết ngắn giúp bạn cập nhật cơ hội, tâm lý và hệ thống giao dịch mà tôi đang sử dụng.
           Toàn bộ bài viết đều được SEO chuẩn để bạn dễ dàng chia sẻ lại cho cộng đồng.
         </p>
@@ -140,7 +138,7 @@ function InsightsPreview({ articles }: { articles: Awaited<ReturnType<typeof loa
               <h3 className="mt-4 font-display text-xl font-semibold text-neutral-950 dark:text-neutral-50">
                 <Link href={article.href} className="hover:text-primary-500 dark:hover:text-primary-400 transition-colors">{article.title}</Link>
               </h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">{article.description}</p>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-600 dark:text-white">{article.description}</p>
               <div className="mt-5 flex items-center gap-3 text-sm text-neutral-500 dark:text-neutral-400">
                 <Image
                   alt={article.author.name}
@@ -171,7 +169,7 @@ function LibraryPreview() {
         <h2 className="font-display text-3xl font-semibold text-neutral-950 dark:text-neutral-50 sm:text-4xl">
           Ebook, slide và template quản lý vốn
         </h2>
-        <p className="max-w-3xl text-base text-neutral-600 dark:text-neutral-300">
+        <p className="max-w-3xl text-base text-neutral-600 dark:text-white">
           Tổng hợp tài nguyên mà tôi thường nhắc trên các buổi livestream. Bạn có thể tải ngay và áp dụng vào hệ thống giao dịch của mình.
         </p>
       </div>
@@ -190,7 +188,7 @@ function LibraryPreview() {
                 placeholder="blur"
               />
             </div>
-            <div className="mt-4 text-xs font-semibold uppercase tracking-[0.3em] text-neutral-400 dark:text-neutral-300">
+            <div className="mt-4 text-xs font-semibold uppercase tracking-[0.3em] text-neutral-400 dark:text-white">
               {item.format}
             </div>
             <h3 className="mt-3 text-lg font-semibold text-neutral-950 dark:text-neutral-50">{item.title}</h3>

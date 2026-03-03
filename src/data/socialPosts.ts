@@ -1227,7 +1227,7 @@ Nếu anh em không thực sự đam mê, không yêu thích việc khám phá t
     content: "",
     fullContent: `Hãy cứ chịu khó gieo hạt, trồng cây, tưới tắm,...đồng thời vun bồi học hỏi kỹ thuật gieo trồng để làm sao cây ít chết, phát triển nhanh & cho năng suất cao. Đến một ngày nào đó khi bạn già & mệt ngồi dưới một gốc cây, đó rất có thể là cây mà chính bạn trước kia đã gieo trồng & chăm sóc. Bạn xứng đáng được hưởng trái ngọt & bóng mát.
 
-Trong 5-8 năm đầu tiên của sự nghiệp bạn nên tập trung gieo trồng. Tuổi trẻ bây giờ có nhiều bạn trồng thì không muốn trồng chỉ đòi hái quả. Bạn thử nghĩ xem, bạn muốn hái quả mà không chịu trồng cây, đầu tư thời gian & công sức chăm bón thì có phải bạn phải đi ăn cắp không. Mà có ăn cắp thì bạn cũng thấp thỏm không yên, có nhiều tiền cũng không vẻ vang gì.
+Trong 5-7 năm đầu tiên của sự nghiệp bạn nên tập trung gieo trồng. Tuổi trẻ bây giờ có nhiều bạn trồng thì không muốn trồng chỉ đòi hái quả. Bạn thử nghĩ xem, bạn muốn hái quả mà không chịu trồng cây, đầu tư thời gian & công sức chăm bón thì có phải bạn phải đi ăn cắp không. Mà có ăn cắp thì bạn cũng thấp thỏm không yên, có nhiều tiền cũng không vẻ vang gì.
 
 Nên làm gì cũng thuận theo tự nhiên, đừng khôn lỏi đi tắt đón đầu, đôi khi cái giá bạn phải trả sẽ đắt vô cùng. Cái gì thì cái năng lực của mình đến đâu mình hưởng đến đó là viên mãn nhất. Không có tiền đã khổ đã nhục, nhưng có nhiều tiền mà không có kiến thức thì còn nhục hơn.`,
     shares: 28,
@@ -1500,7 +1500,7 @@ Rơi vào trạng thái "không còn nỗi đau hoặc ít nỗi đau nhất" kh
 Vì đánh theo kiểu DCA này, phương pháp này rất thịnh hoành, đa số trader mới đều biết và dùng pp này, vì thị trường 70-80% là đi ngang và chạy trong 1 biên độ giá nào đó
 Rồi DCA rất nhiều lần nó cho mình về bờ, nhưng lãi tí lại chốt non vì được về bờ đi đa số sẽ thoát hoặc lãi ít là chạy rồi
 Dù pp này đúng 99 lần chỉ 1 lần thị trường có xu hướng mạnh là thổi bay cả tài khoản, vì càng âm càng DCA, khó có thể cắt lỗ, vay mượn thêm để DCA , nhưng sai chỉ 1 lần là logout ra khỏi thị trường vĩnh viễn, ko còn cơ hội để quay lại market, vì nợ nần quá nhiều rồi.
-Nên số đông trader mới vào nghề ko tồn tại quá 3 năm là vì vậy, nên ae thấy đa số trader là newbie là nhiều, còn ae trader kỳ cựu 7,8 năm là rất ít.`,
+Nên số đông trader mới vào nghề ko tồn tại quá 3 năm là vì vậy, nên ae thấy đa số trader là newbie là nhiều, còn ae trader kỳ cựu 7,7 năm là rất ít.`,
     shares: 28,
   },
   {
