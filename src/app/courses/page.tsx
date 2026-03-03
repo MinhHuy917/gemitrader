@@ -15,73 +15,51 @@ export const metadata: Metadata = {
 
 const plans = [
   {
-    id: 'essential',
-    title: 'Essential',
-    price: '2.5 triệu',
+    id: 'core-system',
+    title: 'Core System',
+    price: '199$',
     period: '',
     billing: 'Thanh toán một lần',
-    saving: '',
-    level: 'Cơ bản',
+    saving: 'Giá đề xuất: 199$',
+    level: 'Khoá 1 · Hệ thống giao dịch thực chiến',
+    tagline1: 'Xây hệ thống · Học & thực hành',
+    tagline2: 'Biết chính xác khi nào nên vào lệnh, ngừng giao dịch theo cảm xúc',
     features: [
-      'Lộ trình nhập môn trading 8 tuần',
-      'Hiểu cấu trúc thị trường & đọc biểu đồ',
-      'Thực hành demo với bộ template có sẵn',
-      'Quy tắc quản lý rủi ro 1-2%',
-      'Cộng đồng hỗ trợ cơ bản',
+      'Phù hợp với người muốn xây dựng một hệ thống giao dịch rõ ràng, vào–thoát lệnh có kế hoạch thay vì giao dịch cảm tính.',
+      'Cấu trúc thị trường & tư duy đọc biểu đồ thực tế.',
+      'Phân tích kỹ thuật nâng cao (Fibonacci, cấu trúc sóng, vùng thanh khoản).',
+      'Xây dựng chiến lược đa khung thời gian (D1 – H4 – H1 – M15).',
+      'Quy tắc quản lý vốn 1–2% theo hệ thống.',
+      'Backtest & checklist vào/ra lệnh chuẩn hoá.',
+      'Bộ template & mẫu nhật ký giao dịch.',
+      'Truy cập cộng đồng học viên.',
+      'Kết quả: có hệ thống riêng để luyện tập, ngừng giao dịch theo cảm xúc.',
     ],
-    href: '/courses/checkout?plan=essential',
-  },
-  {
-    id: 'plus',
-    title: 'Plus',
-    price: '4.5 triệu',
-    period: '',
-    billing: 'Thanh toán một lần',
-    saving: '',
-    level: 'Trung cấp',
-    features: [
-      'Phân tích kỹ thuật nâng cao 10 tuần',
-      'Mẫu biểu đồ, Fibonacci, Elliott',
-      'Chiến lược đa khung thời gian',
-      'Backtest & checklist vào/ra lệnh',
-      'Coaching nhóm 2 buổi/tháng',
-    ],
-    href: '/courses/checkout?plan=plus',
+    href: '/courses/checkout?plan=core-system',
     highlight: true,
   },
   {
-    id: 'premium',
-    title: 'Premium',
-    price: '6 triệu',
+    id: 'mentorship',
+    title: 'Mentorship Đồng Hành',
+    price: '499$',
     period: '',
     billing: 'Thanh toán một lần',
-    saving: '',
-    level: 'Chuyên sâu',
+    saving: 'Giá đề xuất: 499$',
+    level: 'Khoá 2 · Cá nhân hoá & nâng cấp hiệu suất',
+    tagline1: 'Cá nhân hoá & tối ưu · Đồng hành & nâng cấp',
+    tagline2: 'Chuẩn hoá hệ thống cá nhân, loại bỏ giao dịch bốc đồng, duy trì hiệu suất ổn định',
     features: [
-      'Tâm lý giao dịch & kỷ luật hệ thống',
-      'Quản trị cảm xúc, hạn chế FOMO',
-      'Kế hoạch giao dịch cá nhân hoá',
-      'Phản hồi nhật ký giao dịch hằng tuần',
-      'Phòng thảo luận real-time',
+      'Phù hợp với người đã có nền tảng và muốn nâng cấp hệ thống, cải thiện kỷ luật và tối ưu hiệu suất giao dịch.',
+      'Bao gồm toàn bộ nội dung Core System.',
+      'Cá nhân hoá hệ thống giao dịch theo tính cách & khung thời gian phù hợp.',
+      'Review nhật ký giao dịch hàng tuần.',
+      'Phân tích lệnh thực tế và sửa lỗi trực tiếp.',
+      'Phòng thảo luận & cập nhật thị trường định kỳ.',
+      '1:1 review chiến lược mỗi tháng.',
+      'Ưu tiên hỗ trợ khi thị trường biến động mạnh.',
+      'Mục tiêu: chuẩn hoá hệ thống cá nhân, loại bỏ giao dịch bốc đồng, duy trì hiệu suất ổn định theo tháng.',
     ],
-    href: '/courses/checkout?plan=premium',
-  },
-  {
-    id: 'ultimate',
-    title: 'Ultimate',
-    price: '8.5 triệu',
-    period: '',
-    billing: 'Thanh toán một lần',
-    saving: '',
-    level: 'Master',
-    features: [
-      'Giao dịch Crypto chuyên sâu & on-chain',
-      'Algorithmic trading cơ bản với Python',
-      'Bộ chỉ báo & dashboard tuỳ chỉnh',
-      '1:1 review chiến lược mỗi tháng',
-      'Ưu tiên hỗ trợ & tài liệu cập nhật',
-    ],
-    href: '/courses/checkout?plan=ultimate',
+    href: '/courses/checkout?plan=mentorship',
   },
 ]
 
@@ -121,6 +99,12 @@ function PlanCard({
           <p className="text-sm text-neutral-500 dark:text-neutral-400">
             {plan.billing || 'Thanh toán một lần'}
           </p>
+          {('tagline1' in plan || 'tagline2' in plan) && (
+            <div className="mt-2 space-y-0.5 text-sm text-neutral-700 dark:text-neutral-200">
+              {'tagline1' in plan && plan.tagline1 && <p>{plan.tagline1}</p>}
+              {'tagline2' in plan && plan.tagline2 && <p>{plan.tagline2}</p>}
+            </div>
+          )}
           {plan.saving && (
             <p className="text-sm text-amber-500 dark:text-amber-300">{plan.saving}</p>
           )}
@@ -195,7 +179,7 @@ export default function Courses() {
           </div>
 
           <div className="mt-12">
-            <FadeInStagger className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <FadeInStagger className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:max-w-4xl mx-auto">
               {plans.map((plan) => (
                 <FadeIn key={plan.id}>
                   <PlanCard plan={plan} />

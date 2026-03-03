@@ -18,24 +18,22 @@ type PlanInfo = {
 }
 
 const plans: PlanInfo[] = [
-  { id: 'essential', title: 'Essential', price: '2.5 triệu (thanh toán một lần)' },
-  { id: 'plus', title: 'Plus', price: '4.5 triệu (thanh toán một lần)' },
-  { id: 'premium', title: 'Premium', price: '6 triệu (thanh toán một lần)' },
-  { id: 'ultimate', title: 'Ultimate', price: '8.5 triệu (thanh toán một lần)' },
+  { id: 'core-system', title: 'Core System', price: '199$ (thanh toán một lần)' },
+  { id: 'mentorship', title: 'Mentorship Đồng Hành', price: '499$ (thanh toán một lần)' },
 ]
 
 type Step = 'form' | 'qr' | 'verifying' | 'success'
 
 function CheckoutContent() {
   const searchParams = useSearchParams()
-  const defaultPlan = searchParams.get('plan') || 'plus'
+  const defaultPlan = searchParams.get('plan') || 'core-system'
 
   const [step, setStep] = useState<Step>('form')
   const [selectedPlan, setSelectedPlan] = useState(defaultPlan)
   const [form, setForm] = useState({ name: '', email: '', phone: '', telegram: '' })
 
   const activePlan = useMemo(
-    () => plans.find((p) => p.id === selectedPlan) || plans[1],
+    () => plans.find((p) => p.id === selectedPlan) || plans[0],
     [selectedPlan],
   )
 
